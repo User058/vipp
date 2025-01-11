@@ -27,14 +27,6 @@ wget -O run-update "https://raw.githubusercontent.com/User058/vipp/main/options/
 chmod +x run-update
 # RUN UPDATE
 echo ""
-clear
-echo ""
-echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│                 PROSES UPDATE                   │" | lolcat
-echo -e "└─────────────────────────────────────────────────┘" | lolcat
-echo -e "\e[0;32mPlease Wait...!\e[0m"
-clear
-echo ""
 echo -e "┌─────────────────────────────────────────────────┐" | lolcat
 echo -e "│                 PROSES UPDATE                   │" | lolcat
 echo -e "└─────────────────────────────────────────────────┘" | lolcat
@@ -98,38 +90,6 @@ chmod +x /usr/bin/infoserv
 chmod +x /usr/bin/menu-set
 chmod +x /usr/bin/about
 clear
-echo -e ""
-echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│                 PROSES UPDATE                   │" | lolcat
-echo -e "└─────────────────────────────────────────────────┘" | lolcat
-echo -e "\e[0;32mDownloaded successfully!\e[0m"
-echo ""
-ver=$( curl https://raw.githubusercontent.com/User058/vipp/main/newversion )
-sleep 1
-clear
-echo -e ""
-echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│                 PROSES UPDATE                   │" | lolcat
-echo -e "└─────────────────────────────────────────────────┘" | lolcat
-echo -e "\e[0;32mPatching New Update, Please Wait...\e[0m"
-echo ""
-sleep 2
-clear
-echo -e ""
-echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│                 PROSES UPDATE                   │" | lolcat
-echo -e "└─────────────────────────────────────────────────┘" | lolcat
-echo -e "\e[0;32mPatching... OK!\e[0m"
-sleep 1
-echo ""
-clear
-echo -e ""
-echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│                 PROSES UPDATE                   │" | lolcat
-echo -e "└─────────────────────────────────────────────────┘" | lolcat
-echo -e "\e[0;32mSucces Update Script For New Version\e[0m"
-cd
-echo "$ver" > /opt/.ver
 rm -f update.sh
 clear
 echo ""
