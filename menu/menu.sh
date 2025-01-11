@@ -272,8 +272,6 @@ echo -e "    $y 3.$NC $BIBlue MENU VLESS$NC              $y 8.$NC $BIBlue INFO P
 echo -e "    $y 4.$NC $BIBlue MENU TROJAN$NC             $y 9.$NC $BIBlue CEK AKUN$NC" 
 echo -e "    $y 5.$NC $BIBlue SHADOWSOCKS$NC             $y x.$NC $BIBlue EXIT SCRIPT$NC"     
 echo -e " ${BIBlue}└─────────────────────────────────────────────────────┘"
-echo -e "                   Version : 1.4.2 ${NC}" | lolcat
-echo -e "                   _______________${NC}" | lolcat
 echo
 read -p " Select menu : " opt
 echo -e ""
