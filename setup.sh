@@ -128,7 +128,7 @@ if [ -f /home/needupdate ]; then
 red "Your script need to update first !"
 exit 0
 elif [ "$res" = "Permission Accepted..." ]; then
-blue "Permission Accepted!"
+tyblue "Permission Accepted!"
 else
 red "Permission Denied!
 Please Buy AutoScript Premium
