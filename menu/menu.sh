@@ -266,12 +266,12 @@ echo -e "${BICyan}    ${BIYellow}SSH         VMESS           VLESS          TROJ
 echo -e "${BICyan}    ${Blue} $ssh1           $vma               $vla              $trb $NC"
 echo -e "${BIBlue} └─────────────────────────────────────────────────────┘${NC}"
 echo -e " ${BIBlue}┌─────────────────────────────────────────────────────┐"
-echo -e "    $y 1.$NC $BIBlue MENU SSH$NC                $y 7.$NC $BIBlue BACKUP/RESTORE$NC" 
-echo -e "    $y 2.$NC $BIBlue MENU VMESS$NC              $y 8.$NC $BIBlue SETTINGS$NC"    
-echo -e "    $y 3.$NC $BIBlue MENU VLESS$NC              $y 9.$NC $BIBlue ADD HOST/DOMAIN$NC"    
+echo -e "    $y 1.$NC $BIBlue MENU SSH$NC                $y 7.$NC $BIBlue  BACKUP/RESTORE$NC" 
+echo -e "    $y 2.$NC $BIBlue MENU VMESS$NC              $y 8.$NC $BIBlue  SETTINGS$NC"    
+echo -e "    $y 3.$NC $BIBlue MENU VLESS$NC              $y 9.$NC $BIBlue  ADD HOST/DOMAIN$NC"    
 echo -e "    $y 4.$NC $BIBlue MENU TROJAN$NC             $y 10.$NC $BIBlue UPDATE SCRIPT$NC" 
 echo -e "    $y 5.$NC $BIBlue SHADOWSOCKS$NC             $y 11.$NC $BIBlue RESTART SCRIPT$NC"    
-echo -e "    $y 6.$NC $BIBlue REBOOT$NC             	 $y x.$NC $BIBlue EXIT SCRIPT$NC"  
+echo -e "    $y 6.$NC $BIBlue REBOOT$NC             	 $y x.$NC $BIBlue  EXIT SCRIPT$NC"  
 echo -e " ${BIBlue}└─────────────────────────────────────────────────────┘"
 echo
 read -p " Select menu : " opt
