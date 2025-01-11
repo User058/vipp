@@ -425,17 +425,17 @@ function make_folder_xray() {
 echo -e "┌─────────────────────────────────────────┐"
 echo -e " \E[41;1;39m           >>> Install Source <<<        \E[0m$NC"
 echo -e "└─────────────────────────────────────────┘"
-wget -q https://raw.githubusercontent.com/User058/vipp/main/anggunsource.sh && chmod +x anggunsource.sh && ./anggunsource.sh
+wget -q https://raw.githubusercontent.com/User058/vipp/main/tools/anggunsource.sh && chmod +x anggunsource.sh && ./anggunsource.sh
 #install ssh-vpn
 echo -e "┌─────────────────────────────────────────┐"
 echo -e " \E[41;1;39m          >>> Install SSH WS <<<        \E[0m$NC"
 echo -e "└─────────────────────────────────────────┘"
-wget -q https://raw.githubusercontent.com/User058/vipp/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+wget -q https://raw.githubusercontent.com/User058/vipp/main/tools/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 #install ins-xray
 echo -e "┌─────────────────────────────────────────┐"
 echo -e " \E[41;1;39m            >>> Install Xray <<<         \E[0m$NC"
 echo -e "└─────────────────────────────────────────┘"
-wget -q https://raw.githubusercontent.com/User058/vipp/main/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget -q https://raw.githubusercontent.com/User058/vipp/main/tools/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 
 #install ins-xray
 echo -e "┌─────────────────────────────────────────┐"
