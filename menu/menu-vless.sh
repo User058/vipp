@@ -171,7 +171,7 @@ echo -e "Link gRPC      : ${vlesslink3}"
 echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo ""
 echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│               ILHAM STORE               │" | lolcat
+echo -e "│               USER058 STR              │" | lolcat
 echo -e "└─────────────────────────────────────────────────┘" | lolcat
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
@@ -216,7 +216,7 @@ echo -e "Expired On     : $exp"
 echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo ""
 echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│               ILHAM STORE               │" | lolcat
+echo -e "│               USER058 STR              │" | lolcat
 echo -e "└─────────────────────────────────────────────────┘" | lolcat
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
@@ -264,7 +264,7 @@ rm -rf /tmp/other.txt
 
 echo ""
 echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│               ILHAM STORE               │" | lolcat
+echo -e "│               USER058 STR              │" | lolcat
 echo -e "└─────────────────────────────────────────────────┘" | lolcat
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
@@ -321,7 +321,7 @@ echo -e "└──────────────────────�
     echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
     echo ""
 echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│               ILHAM STORE               │" | lolcat
+echo -e "│               USER058 STR              │" | lolcat
 echo -e "└─────────────────────────────────────────────────┘" | lolcat
 echo ""
     read -n 1 -s -r -p "Press any key to back on menu"
@@ -369,7 +369,7 @@ echo -e "└──────────────────────�
     echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
     echo ""
 echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│               ILHAM STORE               │" | lolcat
+echo -e "│               USER058 STR              │" | lolcat
 echo -e "└─────────────────────────────────────────────────┘" | lolcat
 echo ""
     read -n 1 -s -r -p "Press any key to back on menu"

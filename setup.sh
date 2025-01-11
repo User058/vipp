@@ -1,11 +1,5 @@
 #!/bin/bash
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
-# BOT INFORMATION
-date=$(date -R | cut -d " " -f -5)
-export CHATID="1793095437"
-export KEY="5996149634:AAG1tGt9nn7ipxGGXQuwmPaMKuv0DqttB6k"
-export TIME="10"
-export URL="https://api.telegram.org/bot$KEY/sendMessage"
 IP=$(wget -qO- ipinfo.io/ip);
 domain=$(cat /etc/xray/domain)
 date=$(date +"%Y-%m-%d")
@@ -123,23 +117,23 @@ mkdir -p /etc/xray
 
 echo -e "${tyblue} Welcome To Script Premium Vpn Express${NC} "
 sleep 2
-echo -e "[ ${green}INFO${NC} ] Mempersiapkan Instal File"
+echo -e "[ ${green}INFO${NC} ] Preparing to Install Files"
 apt install git curl -y >/dev/null 2>&1
-echo -e "[ ${green}INFO${NC} ] Instal Script Sudah Siap"
+echo -e "[ ${green}INFO${NC} ] Script Installation Ready"
 sleep 2
-echo -ne "[ ${green}INFO${NC} ] Check your permission : "
+echo -ne "[ ${green}INFO${NC} ] Checking your permission : "
 
 PERMISSION
 if [ -f /home/needupdate ]; then
 red "Your script need to update first !"
 exit 0
 elif [ "$res" = "Permission Accepted..." ]; then
-green "Permission Accepted!"
+blue "Permission Accepted!"
 else
 red "Permission Denied!
 Please Buy AutoScript Premium
-Whatsapp : 08981874211
-Telegram : t.me/AimanVpnExpress"
+Whatsapp : 0768381055
+Telegram : t.me/User058"
 rm setup.sh > /dev/null 2>&1
 sleep 10
 exit 0
@@ -149,8 +143,8 @@ sleep 3
 # // cek old script
 if [[ -r /etc/xray/domain ]]; then
 clear
-echo -e "${INFO} Having Script Detected !"
-echo -e "${INFO} If You Replacing Script, All Client Data On This VPS Will Be Cleanup !"
+echo -e "${INFO} Script Alredy Installed !"
+echo -e "${INFO} If You Replacing Script, All Client Data On This VPS Will Be Deleted !"
 read -p "Are You Sure Wanna Replace Script ? (Y/N) " josdong
 if [[ $josdong == "Y" ]]; then
 clear
@@ -206,8 +200,8 @@ clear;clear;clear
 
 # // Starting Setup Domain
 echo -e "${YELLOW}-----------------------------------------------------${NC}"
-echo -e "1. Menggunakan Domain Pribadi ?"
-echo -e "2. Menggunakan Domain Otomatis ?"
+echo -e "1. Use Personl Domain"
+echo -e "2. Use Script Domain"
 echo -e "${YELLOW}-----------------------------------------------------${NC}"
 echo ""
 read -p "$( echo -e "${GREEN}Input Your Choose ? ${NC}(${YELLOW}1/2${NC})${NC} " )" choose_domain
@@ -236,10 +230,10 @@ mkdir -p /var/www/html
 # // String / Request Data
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
 subsl=$(</dev/urandom tr -dc a-z0-9 | head -c5)
-DOMAIN=kingvpn.my.id
-SUB_DOMAIN=${sub}.kingvpn.my.id
-CF_ID=hannaugo@gmail.com
-CF_KEY=e3341a6705e970eda3577f440d0cca6e3d682
+DOMAIN=vojo.lol
+SUB_DOMAIN=${sub}.vojo.lol
+CF_ID=vojokeith@hotmail.com
+CF_KEY=BYKgwZhHOMOkInYIR5KPHUgYc8v1-oJLyDRIsS29
 set -euo pipefail
 IP=$(curl -sS ifconfig.me);
 echo "Updating DNS for ${SUB_DOMAIN}..."
@@ -297,7 +291,7 @@ chmod +x /root/.acme.sh/acme.sh
 /root/.acme.sh/acme.sh --issue -d $domain --standalone -k ec-256
 ~/.acme.sh/acme.sh --installcert -d $domain --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key --ecc
 # // Success
-echo -e "${OKEY} Your Domain : $domain"
+echo -e "${OKEY} Enter Your Domain : $domain"
 sleep 2
 
 elif [[ $choose_domain == "1" ]]; then
@@ -307,11 +301,11 @@ clear
 clear && clear && clear
 clear;clear;clear
 
-echo -e "${GREEN}Indonesian Language${NC}"
+echo -e "${GREEN} English Language${NC}"
 echo -e "${YELLOW}-----------------------------------------------------${NC}"
-echo -e "Silakan Pointing Domain Anda Ke IP VPS"
-echo -e "Untuk Caranya Arahkan NS Domain Ke Cloudflare"
-echo -e "Kemudian Tambahkan A Record Dengan IP VPS"
+echo -e "Please point your domain to the VPS IP"
+echo -e "For How To Point NS Domain To Cloudflare"
+echo -e "Then Add A Record With IP VPS Domain To Cloudflare"
 echo -e "${YELLOW}-----------------------------------------------------${NC}"
 echo ""
 echo ""
@@ -700,6 +694,6 @@ Client Name   : $Name
 
 "
 history -c
-echo -e "Instal sukses proses reboot selama 5 detik !!"
+echo -e "Installation Success; Rebooting In 5 Secs !!"
 sleep 5
 reboot

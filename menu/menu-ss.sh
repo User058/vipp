@@ -171,7 +171,7 @@ echo -e "${shadowsockslink1}"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo ""
 echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│               YSSHSTORE                    │" | lolcat
+echo -e "│               USER058STR                    │" | lolcat
 echo -e "└─────────────────────────────────────────────────┘" | lolcat 
 echo ""  
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -219,7 +219,7 @@ echo -e "Expired On     : $exp"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo ""
 echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│               YSSHSTORE                │" | lolcat
+echo -e "│               USER058STR                │" | lolcat
 echo -e "└─────────────────────────────────────────────────┘" | lolcat
 echo "" | tee -a /etc/log-create-user.log
 read -n 1 -s -r -p "Press any key to back on menu"
@@ -262,7 +262,7 @@ echo -e "$jum2";
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo ""
 echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│               YSSHSTORE                    │" | lolcat
+echo -e "│               USER058STR                    │" | lolcat
 echo -e "└─────────────────────────────────────────────────┘" | lolcat
 fi
 rm -rf /tmp/ipxray.txt
@@ -325,7 +325,7 @@ echo -e "└──────────────────────�
     echo ""
     echo ""
 echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│               YSSHSTORE                    │" | lolcat
+echo -e "│               USER058STR                    │" | lolcat
 echo -e "└─────────────────────────────────────────────────┘" | lolcat
 echo ""
     read -n 1 -s -r -p "Press any key to back on menu"
@@ -373,7 +373,7 @@ echo -e "└──────────────────────�
     echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
     echo ""
 echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│               YSSHSTORE                    │" | lolcat
+echo -e "│               USER058STR                    │" | lolcat
 echo -e "└─────────────────────────────────────────────────┘" | lolcat
 echo ""
     read -n 1 -s -r -p "Press any key to back on menu"

@@ -110,7 +110,7 @@ timedatectl set-timezone Asia/Jakarta
 apt install curl pwgen openssl netcat cron -y
 
 # Make Folder & Log XRay & Log Trojan
-    print_install "Membuat direktori xray"
+    print_install "Create xray directory"
     mkdir -p /etc/{xray,vmess,websocket,vless,trojan,shadowsocks}
     # mkdir -p /usr/sbin/xray/
     mkdir -p /var/www/html/
@@ -188,9 +188,9 @@ apt install -y nginx
 cd
 rm -fr /etc/nginx/sites-enabled/default
 rm -fr /etc/nginx/sites-available/default
-wget -q -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/AngIMAN/v6/main/tools/nginx.conf" 
+wget -q -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/User058/vipp/main/tools/nginx.conf" 
 #mkdir -p /home/vps/public_html
-wget -q -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/AngIMAN/v6/main/tools/vps.conf"
+wget -q -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/User058/vipp/main/tools/vps.conf"
 
 # Install Xray #
 #==========#

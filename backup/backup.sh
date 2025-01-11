@@ -16,16 +16,16 @@ clear
 IP=$(wget -qO- ipinfo.io/ip);
 date=$(date +"%Y-%m-%d")
 clear
-email=$(cat /home/email)
-if [[ "$email" = "" ]]; then
-echo "Masukkan Email Untuk Menerima Backup"
-read -rp "Email : " -e email
-cat <<EOF>>/home/email
-$email
-EOF
-fi
-clear
-echo "Mohon Menunggu , Proses Backup sedang berlangsung !!"
+#email=$(cat /home/email)
+#if [[ "$email" = "" ]]; then
+#echo "Enter Email To Receive Backup"
+#read -rp "Email : " -e email
+#cat <<EOF>>/home/email
+#$email
+#EOF
+#fi
+#clear
+echo "Please Wait, Backup Process is in progress !!"
 rm -rf /root/backup
 mkdir /root/backup
 cp -r /root/.acme.sh /root/backup/ &> /dev/null

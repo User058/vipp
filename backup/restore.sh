@@ -56,7 +56,7 @@ cp -r /root/backup/crontab /etc/ &> /dev/null
 cp -r /root/backup/cron.d /etc/ &> /dev/null
 rm -rf /root/backup &> /dev/null
 rm -rf /root/backup
-echo -e "$COLOR1│${NC}  [ ${green}INFO${NC} ] • Done... Successfully"
+echo -e "$COLOR1│${NC}  [ ${green}INFO${NC} ] • Restore Successfull..."
 rm -f backup.zip
 echo Done
 echo ""

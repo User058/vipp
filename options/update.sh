@@ -31,7 +31,7 @@ if [ "$(systemd-detect-virt)" == "openvz" ]; then
 fi
 echo ""
 version=$(cat /opt/.ver)
-ver=$( curl https://raw.githubusercontent.com/${GitUser}/v6/main/newversion )
+ver=$( curl https://raw.githubusercontent.com/${GitUser}/vipp/main/newversion )
 clear
 # CEK UPDATE
 Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
@@ -39,7 +39,7 @@ Info1="$BIWhite($version)${Font_color_suffix}"
 Info2="$BIWhite(LATEST VERSION)${Font_color_suffix}"
 Error="Version $BIWhite[$ver]${Font_color_suffix} available${Red_font_prefix}[Please Update]${Font_color_suffix}"
 version=$(cat /opt/.ver)
-new_version=$( curl https://raw.githubusercontent.com/${GitUser}/v6/main/newversion | grep $version )
+new_version=$( curl https://raw.githubusercontent.com/${GitUser}/vipp/main/newversion | grep $version )
 #Status Version
 if [ $version = $new_version ]; then
 sts="${Info2}"
@@ -70,7 +70,7 @@ read -p "      PLEASE CHOOSE 1 or x : " option2
 case $option2 in
 1)
 version=$(cat /opt/.ver)
-new_version=$( curl https://raw.githubusercontent.com/${GitUser}/v6/main/newversion | grep $version )
+new_version=$( curl https://raw.githubusercontent.com/User058/vipp/main/newversion | grep $version )
 if [ $version = $new_version ]; then
 clear
 echo ""
@@ -111,7 +111,7 @@ echo -e "\e[0;32mGetting New Version Script..\e[0m"
 echo ""
 # UPDATE RUN-UPDATE
 cd /usr/bin
-wget -O run-update "https://raw.githubusercontent.com/${GitUser}/v6/main/options/update.sh"
+wget -O run-update "https://raw.githubusercontent.com/User058/vipp/main/options/update.sh"
 chmod +x run-update
 # RUN UPDATE
 echo ""
@@ -192,7 +192,7 @@ echo -e "│                 PROSES UPDATE                   │" | lolcat
 echo -e "└─────────────────────────────────────────────────┘" | lolcat
 echo -e "\e[0;32mDownloaded successfully!\e[0m"
 echo ""
-ver=$( curl https://raw.githubusercontent.com/${GitUser}/v6/main/version )
+ver=$( curl https://raw.githubusercontent.com/User058/vipp/main/newversion )
 sleep 1
 clear
 echo -e ""

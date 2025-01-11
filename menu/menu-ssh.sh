@@ -169,7 +169,7 @@ echo -e "      Expired => $exp"
 echo -e "─────────────────────────────────────────────────" | lolcat
 echo -e ""  
 echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│               YSSHSTORE                    │" | lolcat
+echo -e "│               USER058STR                    │" | lolcat
 echo -e "└─────────────────────────────────────────────────┘" | lolcat
 else
 clear
@@ -210,7 +210,7 @@ echo -e "      Expired => $exp"
 echo -e "─────────────────────────────────────────────────" | lolcat
 echo -e ""  
 echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│               YSSHSTORE                    │" | lolcat
+echo -e "│               USER058STR                    │" | lolcat
 echo -e "└─────────────────────────────────────────────────┘" | lolcat
 fi
 echo ""
@@ -300,7 +300,7 @@ echo -e "└──────────────────────�
 function ceklim(){
 clear
 echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│              CEK USER MULTILOGIN                │" | lolcat
+echo -e "│            CHECK USER MULTILOGIN                │" | lolcat
 echo -e "└─────────────────────────────────────────────────┘" | lolcat 
 if [ -e "/root/log-limit.txt" ]; then
 echo "User Who Violate The Maximum Limit";
@@ -428,7 +428,7 @@ echo "Account number: $JUMLAH user"
 echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo ""
 echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│               YSSHSTORE                    │" | lolcat
+echo -e "│               USER058STR                    │" | lolcat
 echo -e "└─────────────────────────────────────────────────┘" | lolcat
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
@@ -480,7 +480,7 @@ echo -e " Days Added : $Days Days"
 echo -e " Expires on :  $Expiration_Display"
 echo -e ""
 echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│               YSSHSTORE                    │" | lolcat
+echo -e "│               USER058STR                    │" | lolcat
 echo -e "└─────────────────────────────────────────────────┘" | lolcat
 echo -e ""
 echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
@@ -495,7 +495,7 @@ echo -e ""
 echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e ""
 echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│               YSSHSTORE                    │" | lolcat
+echo -e "│               USER058STR                    │" | lolcat
 echo -e "└─────────────────────────────────────────────────┘" | lolcat
 echo -e ""
 fi
