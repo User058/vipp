@@ -244,6 +244,14 @@ datediff() {
     echo -e "${BIYellow}         $NC$y  Expiry In$NC     $Blue:$NC$BIBlue $(( (d1 - d2) / 86400 ))$BIBlue Days "
 }
 mai="datediff "$Exp" "$DATE""
+echo -e "     ${BICyan} SSH ${NC}: $ressh"" ${BICyan} NGINX ${NC}: $resngx"" ${BICyan}  XRAY ${NC}: $resv2r"" ${BICyan} TROJAN ${NC}: $resv2r"
+echo -e "   ${BICyan}     STUNNEL ${NC}: $resst" "${BICyan} DROPBEAR ${NC}: $resdbr" "${BICyan} SSH-WS ${NC}: $ressshws"
+echo -e "${BIBlue} ┌─────────────────────────────────────────────────────┐${NC}"
+echo -e "   $r ${BIYellow}Traffic${NC}      ${BIYellow}Today       Yesterday       Month   ${NC}"
+echo -e "   $r ${BIBlue}Download${NC}   ${BIBlue}$today_tx $today_txv      $yesterday_tx $yesterday_txv      $month_tx $month_txv   ${NC}"
+echo -e "   $r ${BIBlue}Upload${NC}     ${BIBlue}$today_rx $today_rxv      $yesterday_rx $yesterday_rxv      $month_rx $month_rxv   ${NC}"
+echo -e "   $r ${BIBlue}Total${NC}    ${BIBlue}  $todayd $today_v     $yesterday $yesterday_v      $month $month_v  ${NC} "
+echo -e " ${BIBlue}└─────────────────────────────────────────────────────┘${NC}"
 echo -e "${BIBlue}        ┌─────────────────────────────────────┐" 
 echo -e "${BIYellow}         $NC$y  User$NC          $Blue:$BIBlue $Name " 
 if [ $exp \< 1000 ];
