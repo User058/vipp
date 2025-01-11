@@ -266,11 +266,12 @@ echo -e "${BICyan}    ${BIYellow}SSH         VMESS           VLESS          TROJ
 echo -e "${BICyan}    ${Blue} $ssh1           $vma               $vla              $trb $NC"
 echo -e "${BIBlue} └─────────────────────────────────────────────────────┘${NC}"
 echo -e " ${BIBlue}┌─────────────────────────────────────────────────────┐"
-echo -e "    $y 1.$NC $BIBlue MENU SSH$NC                $y 6.$NC $BIBlue BACKUP/RESTORE$NC" 
-echo -e "    $y 2.$NC $BIBlue MENU VMESS$NC              $y 7.$NC $BIBlue SETTINGS$NC"    
-echo -e "    $y 3.$NC $BIBlue MENU VLESS$NC              $y 8.$NC $BIBlue INFO PORT$NC"    
-echo -e "    $y 4.$NC $BIBlue MENU TROJAN$NC             $y 9.$NC $BIBlue UPDATE SCRIPT$NC" 
-echo -e "    $y 5.$NC $BIBlue SHADOWSOCKS$NC             $y x.$NC $BIBlue EXIT SCRIPT$NC"     
+echo -e "    $y 1.$NC $BIBlue MENU SSH$NC                $y 7.$NC $BIBlue BACKUP/RESTORE$NC" 
+echo -e "    $y 2.$NC $BIBlue MENU VMESS$NC              $y 8.$NC $BIBlue SETTINGS$NC"    
+echo -e "    $y 3.$NC $BIBlue MENU VLESS$NC              $y 9.$NC $BIBlue ADD HOST/DOMAIN$NC"    
+echo -e "    $y 4.$NC $BIBlue MENU TROJAN$NC             $y 10.$NC $BIBlue UPDATE SCRIPT$NC" 
+echo -e "    $y 5.$NC $BIBlue SHADOWSOCKS$NC             $y 11.$NC $BIBlue RESTART SCRIPT$NC"    
+echo -e "    $y 6.$NC $BIBlue REBOOT$NC             $y x.$NC $BIBlue EXIT SCRIPT$NC"  
 echo -e " ${BIBlue}└─────────────────────────────────────────────────────┘"
 echo
 read -p " Select menu : " opt
@@ -281,11 +282,12 @@ case $opt in
 3) clear ; menu-vless ;;
 4) clear ; menu-trojan ;;
 5) clear ; menu-ss ;;
-6) clear ; menu-backup ;;
-7) clear ; menu-set ;;
-8) clear ; info ;;
-9) clear ; update ;;
-99) clear ; update ;;
+6) clear ; reboot ;;
+7) clear ; menu-backup ;;
+8) clear ; menu-set ;;
+9) clear ; addhost ;;
+10)clear ; update
+11)clear ; restart
 0) clear ; menu ;;
 x) exit ;;
 *) echo -e "" ; echo "Press any key to back exit" ; sleep 1 ; menu ;;
