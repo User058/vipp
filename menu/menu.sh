@@ -286,8 +286,8 @@ case $opt in
 7) clear ; menu-backup ;;
 8) clear ; menu-set ;;
 9) clear ; addhost ;;
-10)clear ; update
-11)clear ; restart
+10)clear ; update ;;
+11)clear ; restart ;;
 0) clear ; menu ;;
 x) exit ;;
 *) echo -e "" ; echo "Press any key to back exit" ; sleep 1 ; menu ;;
