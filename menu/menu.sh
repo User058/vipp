@@ -244,6 +244,14 @@ datediff() {
     echo -e "${BIYellow}         $NC$y  Expiry In$NC     $Blue:$NC$BIBlue $(( (d1 - d2) / 86400 ))$BIBlue Days "
 }
 mai="datediff "$Exp" "$DATE""
+echo -e "     ${BICyan} SSH ${NC}: $ressh"" ${BICyan} NGINX ${NC}: $resngx"" ${BICyan}  XRAY ${NC}: $resv2r"" ${BICyan} TROJAN ${NC}: $resv2r"
+echo -e "   ${BICyan}     STUNNEL ${NC}: $resst" "${BICyan} DROPBEAR ${NC}: $resdbr" "${BICyan} SSH-WS ${NC}: $ressshws"
+echo -e "${BIBlue} ┌─────────────────────────────────────────────────────┐${NC}"
+echo -e "   $r ${BIYellow}Traffic${NC}      ${BIYellow}Today       Yesterday       Month   ${NC}"
+echo -e "   $r ${BIBlue}Download${NC}   ${BIBlue}$today_tx $today_txv      $yesterday_tx $yesterday_txv      $month_tx $month_txv   ${NC}"
+echo -e "   $r ${BIBlue}Upload${NC}     ${BIBlue}$today_rx $today_rxv      $yesterday_rx $yesterday_rxv      $month_rx $month_rxv   ${NC}"
+echo -e "   $r ${BIBlue}Total${NC}    ${BIBlue}  $todayd $today_v     $yesterday $yesterday_v      $month $month_v  ${NC} "
+echo -e " ${BIBlue}└─────────────────────────────────────────────────────┘${NC}"
 echo -e "${BIBlue}        ┌─────────────────────────────────────┐" 
 echo -e "${BIYellow}         $NC$y  User$NC          $Blue:$BIBlue $Name " 
 if [ $exp \< 1000 ];
@@ -258,12 +266,13 @@ echo -e "${BICyan}    ${BIYellow}SSH         VMESS           VLESS          TROJ
 echo -e "${BICyan}    ${Blue} $ssh1           $vma               $vla              $trb $NC"
 echo -e "${BIBlue} └─────────────────────────────────────────────────────┘${NC}"
 echo -e " ${BIBlue}┌─────────────────────────────────────────────────────┐"
-echo -e "    $y 1.$NC $BIBlue MENU SSH$NC                $y 7.$NC $BIBlue  BACKUP/RESTORE$NC" 
-echo -e "    $y 2.$NC $BIBlue MENU VMESS$NC              $y 8.$NC $BIBlue  SETTINGS$NC"    
-echo -e "    $y 3.$NC $BIBlue MENU VLESS$NC              $y 9.$NC $BIBlue  ADD HOST/DOMAIN$NC"    
-echo -e "    $y 4.$NC $BIBlue MENU TROJAN$NC             $y 10.$NC $BIBlue UPDATE SCRIPT$NC" 
-echo -e "    $y 5.$NC $BIBlue SHADOWSOCKS$NC             $y 11.$NC $BIBlue RESTART SCRIPT$NC"    
-echo -e "    $y 6.$NC $BIBlue REBOOT$NC             	 $y x.$NC $BIBlue  EXIT SCRIPT$NC"  
+echo -e "    $y 1.$NC $BIBlue MENU SSH$NC                $y 8.$NC $BIBlue  BACKUP/RESTORE$NC" 
+echo -e "    $y 2.$NC $BIBlue MENU VMESS$NC              $y 9.$NC $BIBlue  SETTINGS$NC"    
+echo -e "    $y 3.$NC $BIBlue MENU VLESS$NC              $y 10.$NC $BIBlue ADD HOST/DOMAIN$NC"    
+echo -e "    $y 4.$NC $BIBlue MENU TROJAN$NC             $y 11.$NC $BIBlue RENEW CERTXRAY SCRIPT$NC" 
+echo -e "    $y 5.$NC $BIBlue SHADOWSOCKS$NC             $y 12.$NC $BIBlue UPDATE$NC" 
+echo -e "    $y 6.$NC $BIBlue Bandwidth-Info$NC          $y 13.$NC $BIBlue RESTART SERVICE$NC"    
+echo -e "    $y 7.$NC $BIBlue REBOOT$NC             	 $y x.$NC $BIBlue  EXIT SCRIPT$NC"  
 echo -e " ${BIBlue}└─────────────────────────────────────────────────────┘"
 echo
 read -p " Select menu : " opt
@@ -274,12 +283,14 @@ case $opt in
 3) clear ; menu-vless ;;
 4) clear ; menu-trojan ;;
 5) clear ; menu-ss ;;
-6) clear ; reboot ;;
-7) clear ; menu-backup ;;
-8) clear ; menu-set ;;
-9) clear ; addhost ;;
-10)clear ; update ;;
-11)clear ; restart ;;
+6) clear ; cek-bandwidth ;;
+7) clear ; reboot ;;
+8) clear ; menu-backup ;;
+9) clear ; menu-set ;;
+10)clear ; addhost ;;
+11)clear ; certxray ;;
+12)clear ; update;;
+13)clear ; restart;;
 0) clear ; menu ;;
 x) exit ;;
 *) echo -e "" ; echo "Press any key to back exit" ; sleep 1 ; menu ;;

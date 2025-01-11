@@ -103,18 +103,12 @@ echo -e "┌──────────────────────�
 echo -e "│                  MENU SETTINGS                  │" | lolcat
 echo -e "└─────────────────────────────────────────────────┘" | lolcat
 echo -e " ┌───────────────────────────────────────────────┐" | lolcat
-echo -e "   ${BICyan}[${BIGreen}1${BICyan}]${BIGreen}  ADD Host/Domain${NC}"
-echo -e "   ${BICyan}[${BIGreen}2${BICyan}]${BIGreen}  Renew CertXRAY${NC}"
 echo -e "   ${BICyan}[${BIGreen}3${BICyan}]${BIGreen}  Check Running${NC}"
 echo -e "   ${BICyan}[${BIGreen}4${BICyan}]${BIGreen}  Change Banner SSH${NC} "
-echo -e "   ${BICyan}[${BIGreen}5${BICyan}]${BIGreen}  Info-Bandwidth${NC}"
-echo -e "   ${BICyan}[${BIGreen}6${BICyan}]${BIGreen}  Restart${NC}"
 echo -e "   ${BICyan}[${BIGreen}7${BICyan}]${BIGreen}  Auto Reboot${NC}"
-echo -e "   ${BICyan}[${BIGreen}8${BICyan}]${BIGreen}  Reboot${NC}"
 echo -e "   ${BICyan}[${BIGreen}9${BICyan}]${BIGreen}  SpeedTest${NC}"
 echo -e "   ${BICyan}[${BIGreen}10${BICyan}]${BIGreen} Limit Speed${NC}"
 echo -e "   ${BICyan}[${BIGreen}11${BICyan}]${BIGreen} Webmin${NC}"
-echo -e "   ${BICyan}[${BIGreen}12${BICyan}]${BIGreen} UPDATE SCRIPT${NC}"
 echo -e "   ${BICyan}[${BIGreen}13${BICyan}]${BIGreen} Kick User Mullog${NC}"
 echo -e "   ${BICyan}[${BIGreen}14${BICyan}]${BIGreen} About SCRIPT${NC}"
 echo -e "   ${BICyan}[${BIGreen}15${BICyan}]${BIGreen} Set Reboot Hours${NC}"
