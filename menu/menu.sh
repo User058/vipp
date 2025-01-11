@@ -224,7 +224,7 @@ uptimecek=`uptime -p | awk '{print $6,$7}' | cut -d , -f1`
 cekup=`uptime -p | grep -ow "day"`
 clear
 echo -e " ${BIBlue}           ┌───────────────────────────────┐$NC"
-echo -e " ${BIBlue}           │            ${NC}${BIBlue}.::.${BIYellow}USER058${BIBlue}.::.$NC    " ${BIBlue} │
+echo -e " ${BIBlue}           │          ${NC}${BIBlue}.::.${BIYellow}USER058${BIBlue}.::.$NC    " ${BIBlue} │
 echo -e " ${BIBlue}           └───────────────────────────────┘$NC"
 echo -e "${BIBlue} ┌─────────────────────────────────────────────────────┐${NC}"
 echo -e " ${BIBlue}│$NC  $y System OS ${NC}        $Blue:$NC  "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-` $NC
