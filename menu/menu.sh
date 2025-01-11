@@ -289,6 +289,6 @@ case $opt in
 9) clear ; cat /etc/log-create-user.log ;;
 99) clear ; update ;;
 0) clear ; menu ;;
-x) exit ;;
+x) exit
 *) echo -e "" ; echo "Press any key to back exit" ; sleep 1 ; menu ;;
 esac
