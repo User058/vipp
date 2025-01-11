@@ -40,12 +40,6 @@ Info2="$BIWhite(LATEST VERSION)${Font_color_suffix}"
 Error="Version $BIWhite[$ver]${Font_color_suffix} available${Red_font_prefix}[Please Update]${Font_color_suffix}"
 version=$(cat /opt/.ver)
 new_version=$( curl https://raw.githubusercontent.com/${GitUser}/vipp/main/newversion | grep $version )
-#Status Version
-if [ $version = $new_version ]; then
-sts="${Info2}"
-else
-sts="${Error}"
-fi
 clear
 echo ""
 echo -e ""
