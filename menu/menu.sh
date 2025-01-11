@@ -269,7 +269,7 @@ echo -e " ${BIBlue}┌───────────────────�
 echo -e "    $y 1.$NC $BIBlue MENU SSH$NC                $y 6.$NC $BIBlue BACKUP/RESTORE$NC" 
 echo -e "    $y 2.$NC $BIBlue MENU VMESS$NC              $y 7.$NC $BIBlue SETTINGS$NC"    
 echo -e "    $y 3.$NC $BIBlue MENU VLESS$NC              $y 8.$NC $BIBlue INFO PORT$NC"    
-echo -e "    $y 4.$NC $BIBlue MENU TROJAN$NC             $y 9.$NC $BIBlue CEK AKUN$NC" 
+echo -e "    $y 4.$NC $BIBlue MENU TROJAN$NC             $y 9.$NC $BIBlue UPDATE SCRIPT$NC" 
 echo -e "    $y 5.$NC $BIBlue SHADOWSOCKS$NC             $y x.$NC $BIBlue EXIT SCRIPT$NC"     
 echo -e " ${BIBlue}└─────────────────────────────────────────────────────┘"
 echo
@@ -284,7 +284,7 @@ case $opt in
 6) clear ; menu-backup ;;
 7) clear ; menu-set ;;
 8) clear ; info ;;
-9) clear ; cat /etc/log-create-user.log ;;
+9) clear ; update ;;
 99) clear ; update ;;
 0) clear ; menu ;;
 x) exit ;;
