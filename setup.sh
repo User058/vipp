@@ -58,7 +58,7 @@ export WARNING="${RED}\e[5m"
 export UNDERLINE="\e[4m"
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/king-vpn/v3/main/Regist > /root/tmp
+    curl -sS https://raw.githubusercontent.com/User058/permission/main/Regist > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -74,9 +74,9 @@ BURIQ () {
     done
     rm -f  /root/tmp
 }
-# https://raw.githubusercontent.com/king-vpn/v3/main/Regist 
+# https://raw.githubusercontent.com/User058/permission/main/Regist 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/king-vpn/v3/main/Regist | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/User058/permission/main/Regist | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -93,7 +93,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/king-vpn/v3/main/Regist | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/User058/permission/main/Regist | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -425,17 +425,17 @@ function make_folder_xray() {
 echo -e "┌─────────────────────────────────────────┐"
 echo -e " \E[41;1;39m           >>> Install Source <<<        \E[0m$NC"
 echo -e "└─────────────────────────────────────────┘"
-wget -q https://raw.githubusercontent.com/king-vpn/v6/main/tools/anggunsource.sh && chmod +x anggunsource.sh && ./anggunsource.sh
+wget -q https://raw.githubusercontent.com/User058/vipp/main/anggunsource.sh && chmod +x anggunsource.sh && ./anggunsource.sh
 #install ssh-vpn
 echo -e "┌─────────────────────────────────────────┐"
 echo -e " \E[41;1;39m          >>> Install SSH WS <<<        \E[0m$NC"
 echo -e "└─────────────────────────────────────────┘"
-wget -q https://raw.githubusercontent.com/king-vpn/v6/main/tools/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+wget -q https://raw.githubusercontent.com/User058/vipp/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 #install ins-xray
 echo -e "┌─────────────────────────────────────────┐"
 echo -e " \E[41;1;39m            >>> Install Xray <<<         \E[0m$NC"
 echo -e "└─────────────────────────────────────────┘"
-wget -q https://raw.githubusercontent.com/king-vpn/v6/main/tools/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget -q https://raw.githubusercontent.com/User058/vipp/main/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 
 #install ins-xray
 echo -e "┌─────────────────────────────────────────┐"
@@ -456,7 +456,7 @@ wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/king-vpn/v6/main/
 wget -q -O /usr/bin/clearlog "https://raw.githubusercontent.com/king-vpn/v6/main/options/clearlog.sh"
 wget -q -O /usr/bin/running "https://raw.githubusercontent.com/king-vpn/v6/main/options/running.sh"
 #wget -q -O /usr/bin/cek-trafik "https://raw.githubusercontent.com/king-vpn/v6/main/options/cek-trafik.sh"
-wget -q -O /usr/bin/speedtest "https://raw.githubusercontent.com/king-vpn/v6/main/tools/speedtest_cli.py"
+wget -q -O /usr/bin/speedtest "https://raw.githubusercontent.com/User058/vipp/main/speedtest_cli.py"
 wget -q -O /usr/bin/cek-bandwidth "https://raw.githubusercontent.com/king-vpn/v6/main/options/cek-bandwidth.sh"
 wget -q -O /usr/bin/limitspeed "https://raw.githubusercontent.com/king-vpn/v6/main/options/limitspeed.sh"
 wget -q -O /usr/bin/menu-vless "https://raw.githubusercontent.com/king-vpn/v6/main/menu/menu-vless.sh"
@@ -477,30 +477,30 @@ wget -q -O /usr/bin/infoserv "https://raw.githubusercontent.com/king-vpn/v6/main
 wget -q -O /usr/bin/about "https://raw.githubusercontent.com/king-vpn/v6/main/options/about.sh"
 wget -q -O /usr/bin/sslh-fix-reboot "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/sslh-fix/sslh-fix-reboot.sh"
 cd /usr/sbin
-wget -q -O /usr/bin/mesinssh "https://raw.githubusercontent.com/king-vpn/v6/main/tools/limit/mesinssh.sh"
-wget -q -O /usr/bin/cek-ssh "https://raw.githubusercontent.com/king-vpn/v6/main/tools/limit/cek-ssh.sh"
+wget -q -O /usr/bin/mesinssh "https://raw.githubusercontent.com/User058/vipp/main/limit/mesinssh.sh"
+wget -q -O /usr/bin/cek-ssh "https://raw.githubusercontent.com/User058/vipp/main/limit/cek-ssh.sh"
 chmod +x *
 chmod +x /usr/sbin/*
 cd /usr/bin
-wget -q -O /usr/bin/loop "https://raw.githubusercontent.com/king-vpn/v6/main/tools/limit/loop.sh"
-wget -q -O /usr/bin/matikan "https://raw.githubusercontent.com/king-vpn/v6/main/tools/limit/matikan.sh"
-wget -q -O /usr/bin/limit "https://raw.githubusercontent.com/king-vpn/v6/main/tools/limit/limit.sh"
-wget -q -O /usr/bin/limit-ip-ssh "https://raw.githubusercontent.com/king-vpn/v6/main/tools/limit/limit-ip-ssh.sh"
-wget -q -O /usr/bin/limit-ip-trojan "https://raw.githubusercontent.com/king-vpn/v6/main/tools/limit/limit-ip-trojan.sh"
-wget -q -O /usr/bin/limit-ip-vless "https://raw.githubusercontent.com/king-vpn/v6/main/tools/limit/limit-ip-vless.sh"
-wget -q -O /usr/bin/limit-ip-vmess "https://raw.githubusercontent.com/king-vpn/v6/main/tools/limit/limit-ip-vmess.sh"
-wget -q -O /usr/bin/limit-quota-trojan "https://raw.githubusercontent.com/king-vpn/v6/main/tools/limit/limit-quota-trojan.sh"
-wget -q -O /usr/bin/limit-quota-vmess "https://raw.githubusercontent.com/king-vpn/v6/main/tools/limit/limit-quota-vmess.sh"
-wget -q -O /usr/bin/limit-quota-vless "https://raw.githubusercontent.com/king-vpn/v6/main/tools/limit/limit-quota-vless.sh"
-wget -q -O /usr/bin/quota "https://raw.githubusercontent.com/king-vpn/v6/main/tools/limit/quota.sh"
-wget -q -O /usr/bin/quota-trojan-grpc "https://raw.githubusercontent.com/king-vpn/v6/main/tools/limit/quota-trojan-grpc.sh"
-wget -q -O /usr/bin/quota-trojan-ws "https://raw.githubusercontent.com/king-vpn/v6/main/tools/limit/quota-trojan-ws.sh"
-wget -q -O /usr/bin/quota-vmess-grpc "https://raw.githubusercontent.com/king-vpn/v6/main/tools/limit/quota-vmess-grpc.sh"
-wget -q -O /usr/bin/quota-vmess-ws "https://raw.githubusercontent.com/king-vpn/v6/main/tools/limit/quota-vmess-ws.sh"
-wget -q -O /usr/bin/quota-vless-ws "https://raw.githubusercontent.com/king-vpn/v6/main/tools/limit/quota-vless-ws.sh"
-wget -q -O /usr/bin/quota-vless-grpc "https://raw.githubusercontent.com/king-vpn/v6/main/tools/limit/quota-vless-grpc.sh"
-wget -q -O /usr/bin/quota-vmess-orbit "https://raw.githubusercontent.com/king-vpn/v6/main/tools/limit/quota-vmess-ws-orbit.sh"
-wget -q -O /usr/bin/quota-vmess-orbit1 "https://raw.githubusercontent.com/king-vpn/v6/main/tools/limit/quota-vmess-ws-orbit1.sh"
+wget -q -O /usr/bin/loop "https://raw.githubusercontent.com/User058/vipp/main/limit/loop.sh"
+wget -q -O /usr/bin/matikan "https://raw.githubusercontent.com/User058/vipp/main/limit/matikan.sh"
+wget -q -O /usr/bin/limit "https://raw.githubusercontent.com/User058/vipp/main/limit/limit.sh"
+wget -q -O /usr/bin/limit-ip-ssh "https://raw.githubusercontent.com/User058/vipp/main/limit/limit-ip-ssh.sh"
+wget -q -O /usr/bin/limit-ip-trojan "https://raw.githubusercontent.com/User058/vipp/main/limit/limit-ip-trojan.sh"
+wget -q -O /usr/bin/limit-ip-vless "https://raw.githubusercontent.com/User058/vipp/main/limit/limit-ip-vless.sh"
+wget -q -O /usr/bin/limit-ip-vmess "https://raw.githubusercontent.com/User058/vipp/main/limit/limit-ip-vmess.sh"
+wget -q -O /usr/bin/limit-quota-trojan "https://raw.githubusercontent.com/User058/vipp/main/limit/limit-quota-trojan.sh"
+wget -q -O /usr/bin/limit-quota-vmess "https://raw.githubusercontent.com/User058/vipp/main/limit/limit-quota-vmess.sh"
+wget -q -O /usr/bin/limit-quota-vless "https://raw.githubusercontent.com/User058/vipp/main/limit/limit-quota-vless.sh"
+wget -q -O /usr/bin/quota "https://raw.githubusercontent.com/User058/vipp/main/limit/quota.sh"
+wget -q -O /usr/bin/quota-trojan-grpc "https://raw.githubusercontent.com/User058/vipp/main/limit/quota-trojan-grpc.sh"
+wget -q -O /usr/bin/quota-trojan-ws "https://raw.githubusercontent.com/User058/vipp/main/limit/quota-trojan-ws.sh"
+wget -q -O /usr/bin/quota-vmess-grpc "https://raw.githubusercontent.com/User058/vipp/main/limit/quota-vmess-grpc.sh"
+wget -q -O /usr/bin/quota-vmess-ws "https://raw.githubusercontent.com/User058/vipp/main/limit/quota-vmess-ws.sh"
+wget -q -O /usr/bin/quota-vless-ws "https://raw.githubusercontent.com/User058/vipp/main/limit/quota-vless-ws.sh"
+wget -q -O /usr/bin/quota-vless-grpc "https://raw.githubusercontent.com/User058/vipp/main/limit/quota-vless-grpc.sh"
+wget -q -O /usr/bin/quota-vmess-orbit "https://raw.githubusercontent.com/User058/vipp/main/limit/quota-vmess-ws-orbit.sh"
+wget -q -O /usr/bin/quota-vmess-orbit1 "https://raw.githubusercontent.com/User058/vipp/main/limit/quota-vmess-ws-orbit1.sh"
 wget -q -O /usr/bin/jam "https://raw.githubusercontent.com/king-vpn/v6/main/jam.sh"
 chmod +x /usr/bin/*
 cd 
@@ -585,7 +585,7 @@ if [ ! -f "/etc/log-create-user.log" ]; then
 echo "Log All Account " > /etc/log-create-user.log
 fi
 history -c
-serverV=$( curl -sS https://raw.githubusercontent.com/king-vpn/v6/main/version  )
+serverV=$( curl -sS https://raw.githubusercontent.com/User058/vipp/main/newversion  )
 echo $serverV > /opt/.ver
 aureb=$(cat /home/re_otm)
 b=11
