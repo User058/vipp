@@ -428,7 +428,7 @@ echo "Account number: $JUMLAH user"
 echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo ""
 echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│               USER058STR                    │" | lolcat
+echo -e "│               USER058STR                    	│" | lolcat
 echo -e "└─────────────────────────────────────────────────┘" | lolcat
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"

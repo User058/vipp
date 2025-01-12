@@ -449,7 +449,6 @@ wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/User058/vipp/main
 wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/User058/vipp/main/options/tendang.sh"
 wget -q -O /usr/bin/clearlog "https://raw.githubusercontent.com/User058/vipp/main/options/clearlog.sh"
 wget -q -O /usr/bin/running "https://raw.githubusercontent.com/User058/vipp/main/options/running.sh"
-#wget -q -O /usr/bin/cek-trafik "https://raw.githubusercontent.com/User058/vipp/main/options/cek-trafik.sh"
 wget -q -O /usr/bin/speedtest "https://raw.githubusercontent.com/User058/vipp/main/tools/speedtest_cli.py"
 wget -q -O /usr/bin/cek-bandwidth "https://raw.githubusercontent.com/User058/vipp/main/options/cek-bandwidth.sh"
 wget -q -O /usr/bin/limitspeed "https://raw.githubusercontent.com/User058/vipp/main/options/limitspeed.sh"
@@ -464,37 +463,10 @@ wget -q -O /usr/bin/webmin "https://raw.githubusercontent.com/User058/vipp/main/
 wget -q -O /usr/bin/xp "https://raw.githubusercontent.com/User058/vipp/main/menu/xp.sh"
 wget -q -O /usr/bin/update "https://raw.githubusercontent.com/User058/vipp/main/options/update.sh"
 wget -q -O /usr/bin/addhost "https://raw.githubusercontent.com/User058/vipp/main/menu/addhost.sh"
-wget -q -O /usr/bin/certxray "https://raw.githubusercontent.com/User058/vipp/main/menu/crt.sh"
 wget -q -O /usr/bin/menu-set "https://raw.githubusercontent.com/User058/vipp/main/menu/menu-set.sh"
 wget -q -O /usr/bin/info "https://raw.githubusercontent.com/User058/vipp/main/options/info.sh"
 wget -q -O /usr/bin/infoserv "https://raw.githubusercontent.com/User058/vipp/main/options/infoserv.sh"
 wget -q -O /usr/bin/about "https://raw.githubusercontent.com/User058/vipp/main/options/about.sh"
-wget -q -O /usr/bin/sslh-fix-reboot "https://raw.githubusercontent.com/User058/vipp/main/tools/sslh-fix-reboot.sh"
-cd /usr/sbin
-wget -q -O /usr/bin/mesinssh "https://raw.githubusercontent.com/User058/vipp/main/limit/mesinssh.sh"
-wget -q -O /usr/bin/cek-ssh "https://raw.githubusercontent.com/User058/vipp/main/limit/cek-ssh.sh"
-chmod +x *
-chmod +x /usr/sbin/*
-cd /usr/bin
-wget -q -O /usr/bin/loop "https://raw.githubusercontent.com/User058/vipp/main/limit/loop.sh"
-wget -q -O /usr/bin/matikan "https://raw.githubusercontent.com/User058/vipp/main/limit/matikan.sh"
-wget -q -O /usr/bin/limit "https://raw.githubusercontent.com/User058/vipp/main/limit/limit.sh"
-wget -q -O /usr/bin/limit-ip-ssh "https://raw.githubusercontent.com/User058/vipp/main/limit/limit-ip-ssh.sh"
-wget -q -O /usr/bin/limit-ip-trojan "https://raw.githubusercontent.com/User058/vipp/main/limit/limit-ip-trojan.sh"
-wget -q -O /usr/bin/limit-ip-vless "https://raw.githubusercontent.com/User058/vipp/main/limit/limit-ip-vless.sh"
-wget -q -O /usr/bin/limit-ip-vmess "https://raw.githubusercontent.com/User058/vipp/main/limit/limit-ip-vmess.sh"
-wget -q -O /usr/bin/limit-quota-trojan "https://raw.githubusercontent.com/User058/vipp/main/limit/limit-quota-trojan.sh"
-wget -q -O /usr/bin/limit-quota-vmess "https://raw.githubusercontent.com/User058/vipp/main/limit/limit-quota-vmess.sh"
-wget -q -O /usr/bin/limit-quota-vless "https://raw.githubusercontent.com/User058/vipp/main/limit/limit-quota-vless.sh"
-wget -q -O /usr/bin/quota "https://raw.githubusercontent.com/User058/vipp/main/limit/quota.sh"
-wget -q -O /usr/bin/quota-trojan-grpc "https://raw.githubusercontent.com/User058/vipp/main/limit/quota-trojan-grpc.sh"
-wget -q -O /usr/bin/quota-trojan-ws "https://raw.githubusercontent.com/User058/vipp/main/limit/quota-trojan-ws.sh"
-wget -q -O /usr/bin/quota-vmess-grpc "https://raw.githubusercontent.com/User058/vipp/main/limit/quota-vmess-grpc.sh"
-wget -q -O /usr/bin/quota-vmess-ws "https://raw.githubusercontent.com/User058/vipp/main/limit/quota-vmess-ws.sh"
-wget -q -O /usr/bin/quota-vless-ws "https://raw.githubusercontent.com/User058/vipp/main/limit/quota-vless-ws.sh"
-wget -q -O /usr/bin/quota-vless-grpc "https://raw.githubusercontent.com/User058/vipp/main/limit/quota-vless-grpc.sh"
-wget -q -O /usr/bin/quota-vmess-orbit "https://raw.githubusercontent.com/User058/vipp/main/limit/quota-vmess-ws-orbit.sh"
-wget -q -O /usr/bin/quota-vmess-orbit1 "https://raw.githubusercontent.com/User058/vipp/main/limit/quota-vmess-ws-orbit1.sh"
 wget -q -O /usr/bin/jam "https://raw.githubusercontent.com/User058/vipp/main/options/jam.sh"
 chmod +x /usr/bin/*
 cd 
@@ -522,7 +494,6 @@ chmod +x /usr/bin/webmin
 chmod +x /usr/bin/xp
 chmod +x /usr/bin/update
 chmod +x /usr/bin/addhost
-chmod +x /usr/bin/certxray
 chmod +x /usr/bin/menu-set
 chmod +x /usr/bin/info
 chmod +x /usr/bin/infoserv
