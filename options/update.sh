@@ -42,7 +42,7 @@ wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/User058/vipp/main
 wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/User058/vipp/main/options/tendang.sh"
 wget -q -O /usr/bin/clearlog "https://raw.githubusercontent.com/User058/vipp/main/options/clearlog.sh"
 wget -q -O /usr/bin/running "https://raw.githubusercontent.com/User058/vipp/main/options/running.sh"
-wget -q -O /usr/bin/cek-trafik "https://raw.githubusercontent.com/User058/vipp/main/menu/port-websocket.sh"
+wget -q -O /usr/bin/port-websocket "https://raw.githubusercontent.com/User058/vipp/main/menu/port-websocket.sh"
 wget -q -O /usr/bin/cek-bandwidth "https://raw.githubusercontent.com/User058/vipp/main/options/cek-bandwidth.sh"
 wget -q -O /usr/bin/limitspeed "https://raw.githubusercontent.com/User058/vipp/main/options/limitspeed.sh"
 wget -q -O /usr/bin/menu-vless "https://raw.githubusercontent.com/User058/vipp/main/menu/menu-vless.sh"
