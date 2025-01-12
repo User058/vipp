@@ -108,13 +108,12 @@ function pasang_domain() {
     else
     echo "$pp" > /etc/xray/domain
     echo $pp > /root/domain
-        echo "IP=$pp" > /var/lib/kyt/ipvps.conf
     fi
 }
 
 
 function pasang_ssl() {
-    green "Pasang SSL"
+    green "installing SSL"
     sleep 1
     rm -rf /etc/xray/xray.key
     rm -rf /etc/xray/xray.crt
