@@ -230,8 +230,8 @@ echo -e "${BIBlue} ┌───────────────────�
 echo -e " ${BIBlue}│$NC  $y System OS ${NC}        $Blue:$NC  "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-` $NC
 echo -e " ${BIBlue}│$NC  $y Server Ram ${NC}       $Blue:$NC  $uram MB/ $tram MB${NC}"
 echo -e " ${BIBlue}│$NC  $y CPU Usage ${NC}        $Blue:$NC  $cpu_usage ${NC}"
-echo -e " ${BIBlue}│$NC  $y ISP ${NC}              $Blue:$NC  $(curl -s ipinfo.io/45.32.114.121?token=7ce50028ba7184)${NC}"
-echo -e " ${BIBlue}│$NC  $y CITY ${NC}             $Blue:$NC  $(curl -s ipinfo.io/45.32.114.121?token=7ce50028ba7184)${NC}"
+echo -e " ${BIBlue}│$NC  $y ISP ${NC}              $Blue:$NC  $(curl -s ipinfo.io/45.32.114.121/org/?token=7ce50028ba7184)${NC}"
+echo -e " ${BIBlue}│$NC  $y CITY ${NC}             $Blue:$NC  $(curl -s ipinfo.io/45.32.114.121/timezone/?token=7ce50028ba7184)${NC}"
 echo -e " ${BIBlue}│$NC  $y Domain ${NC}           $Blue:$NC  $(cat /etc/xray/domain)${NC}"
 echo -e " ${BIBlue}│$NC  $y IP-VPS ${NC}           $Blue:$NC  $IPVPS${NC}"
 echo -e " ${BIBlue}│$NC  $y Date & Time ${NC}      $Blue:$NC  $( date -d "0 days" +"%d-%m-%Y | %X" ) ${NC}"
