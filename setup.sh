@@ -468,6 +468,31 @@ wget -q -O /usr/bin/info "https://raw.githubusercontent.com/User058/vipp/main/op
 wget -q -O /usr/bin/infoserv "https://raw.githubusercontent.com/User058/vipp/main/options/infoserv.sh"
 wget -q -O /usr/bin/about "https://raw.githubusercontent.com/User058/vipp/main/options/about.sh"
 wget -q -O /usr/bin/jam "https://raw.githubusercontent.com/User058/vipp/main/options/jam.sh"
+cd /usr/sbin
+wget -q -O /usr/bin/mesinssh "https://raw.githubusercontent.com/User058/vipp/main/tools/limit/mesinssh.sh"
+wget -q -O /usr/bin/cek-ssh "https://raw.githubusercontent.com/User058/vipp/main/tools/limit/cek-ssh.sh"
+chmod +x *
+chmod +x /usr/sbin/*
+cd /usr/bin
+wget -q -O /usr/bin/loop "https://raw.githubusercontent.com/User058/vipp/main/tools/limit/loop.sh"
+wget -q -O /usr/bin/matikan "https://raw.githubusercontent.com/User058/vipp/main/tools/limit/matikan.sh"
+wget -q -O /usr/bin/limit "https://raw.githubusercontent.com/User058/vipp/main/tools/limit/limit.sh"
+wget -q -O /usr/bin/limit-ip-ssh "https://raw.githubusercontent.com/User058/vipp/main/tools/limit/limit-ip-ssh.sh"
+wget -q -O /usr/bin/limit-ip-trojan "https://raw.githubusercontent.com/User058/vipp/main/tools/limit/limit-ip-trojan.sh"
+wget -q -O /usr/bin/limit-ip-vless "https://raw.githubusercontent.com/User058/vipp/main/tools/limit/limit-ip-vless.sh"
+wget -q -O /usr/bin/limit-ip-vmess "https://raw.githubusercontent.com/User058/vipp/main/tools/limit/limit-ip-vmess.sh"
+wget -q -O /usr/bin/limit-quota-trojan "https://raw.githubusercontent.com/User058/vipp/main/tools/limit/limit-quota-trojan.sh"
+wget -q -O /usr/bin/limit-quota-vmess "https://raw.githubusercontent.com/User058/vipp/main/tools/limit/limit-quota-vmess.sh"
+wget -q -O /usr/bin/limit-quota-vless "https://raw.githubusercontent.com/User058/vipp/main/tools/limit/limit-quota-vless.sh"
+wget -q -O /usr/bin/quota "https://raw.githubusercontent.com/User058/vipp/main/tools/limit/quota.sh"
+wget -q -O /usr/bin/quota-trojan-grpc "https://raw.githubusercontent.com/User058/vipp/main/tools/limit/quota-trojan-grpc.sh"
+wget -q -O /usr/bin/quota-trojan-ws "https://raw.githubusercontent.com/User058/vipp/main/tools/limit/quota-trojan-ws.sh"
+wget -q -O /usr/bin/quota-vmess-grpc "https://raw.githubusercontent.com/User058/vipp/main/tools/limit/quota-vmess-grpc.sh"
+wget -q -O /usr/bin/quota-vmess-ws "https://raw.githubusercontent.com/User058/vipp/main/tools/limit/quota-vmess-ws.sh"
+wget -q -O /usr/bin/quota-vless-ws "https://raw.githubusercontent.com/User058/vipp/main/tools/limit/quota-vless-ws.sh"
+wget -q -O /usr/bin/quota-vless-grpc "https://raw.githubusercontent.com/User058/vipp/main/tools/limit/quota-vless-grpc.sh"
+wget -q -O /usr/bin/quota-vmess-orbit "https://raw.githubusercontent.com/User058/vipp/main/tools/limit/quota-vmess-ws-orbit.sh"
+wget -q -O /usr/bin/quota-vmess-orbit1 "https://raw.githubusercontent.com/User058/vipp/main/tools/limit/quota-vmess-ws-orbit1.sh"
 chmod +x /usr/bin/*
 cd 
 chmod +x /usr/bin/usernew
