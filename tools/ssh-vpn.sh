@@ -120,8 +120,8 @@ ver=$VERSION_ID
 
 #detail nama perusahaan
 country=ID
-state=Indonesia
-locality=Indonesia
+state=Kenya
+locality=Kenya
 organization=Effata
 organizationalunit=EffataIDStore
 commonname=EffataStore
