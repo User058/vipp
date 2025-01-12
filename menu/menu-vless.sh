@@ -384,10 +384,10 @@ echo -e "└──────────────────────�
 echo -e " ┌───────────────────────────────────────────────┐" | lolcat
 echo -e "     ${BICyan}[${BIGreen}1${BICyan}]${BIGreen} Create Vless Account${NC}     "
 echo -e "     ${BICyan}[${BIGreen}2${BICyan}]${BIGreen} Trial Vless Acoount  ${NC}   "
-echo -e "     ${BICyan}[${BIGreen}3${BICyan}]${BIGreen} Delete Account Vless ${NC}    "
-echo -e "     ${BICyan}[${BIGreen}4${BICyan}]${BIGreen} Renew Account Vless  ${NC}   "
-echo -e "     ${BICyan}[${BIGreen}5${BICyan}]${BIGreen} Cek User Active XRAY ${NC}    "
-echo -e "     ${BICyan}[${BIGreen}6${BICyan}]${BIGreen} Detail Account Vless  ${NC}   "
+echo -e "     ${BICyan}[${BIGreen}3${BICyan}]${BIGreen} Delete Vless Account ${NC}    "
+echo -e "     ${BICyan}[${BIGreen}4${BICyan}]${BIGreen} Renew Vless Account  ${NC}   "
+echo -e "     ${BICyan}[${BIGreen}5${BICyan}]${BIGreen} Check Active Users XRAY ${NC}    "
+echo -e "     ${BICyan}[${BIGreen}6${BICyan}]${BIGreen} Vless Account Details  ${NC}   "
 echo -e "     ${BICyan}[${BIGreen}0${BICyan}]${BIGreen} Back To Menu   ${NC}  "
 echo -e "     ${BICyan}[${BIGreen}x${BICyan}]${BIGreen} Exit ${NC}  "
 echo -e " └──────────────────────────────────────────────┘" | lolcat

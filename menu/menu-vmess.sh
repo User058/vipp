@@ -488,11 +488,11 @@ echo -e "             ═══[ VMESS ]═══"
 echo -e "\e[32m════════════════════════════════════════" | lolcat
 echo -e "┌─────────────────────────────────────────────────┐" | lolcat
 echo -e "${BICyan}[${BIGreen}1${BICyan}]${BIGreen} Create Vmess Account  ${NC}   "
-echo -e "${BICyan}[${BIGreen}2${BICyan}]${BIGreen} Trial Vmess   ${NC}  "
-echo -e "${BICyan}[${BIGreen}3${BICyan}]${BIGreen} Delete Account Vmess  ${NC}   "
-echo -e "${BICyan}[${BIGreen}4${BICyan}]${BIGreen} Renew Account Vmess  ${NC}   "
-echo -e "${BICyan}[${BIGreen}5${BICyan}]${BIGreen} Check User Login Vmess   ${NC}  "
-echo -e "${BICyan}[${BIGreen}6${BICyan}]${BIGreen} Detail Akun Vmess  ${NC}   "
+echo -e "${BICyan}[${BIGreen}2${BICyan}]${BIGreen} Create Trial Vmess   ${NC}  "
+echo -e "${BICyan}[${BIGreen}3${BICyan}]${BIGreen} Delete Vmess Account ${NC}   "
+echo -e "${BICyan}[${BIGreen}4${BICyan}]${BIGreen} Renew Vmess Account  ${NC}   "
+echo -e "${BICyan}[${BIGreen}5${BICyan}]${BIGreen} Check Vmess Users Login   ${NC}  "
+echo -e "${BICyan}[${BIGreen}6${BICyan}]${BIGreen} Vmess Account Details  ${NC}   "
 echo -e "${BICyan}[${BIGreen}0${BICyan}]${BIGreen} BACK TO MENU${NC}"
 echo -e "${BICyan}[${BIGreen}x${BICyan}]${BIGreen} EXIT   ${NC}  "
 echo -e "└──────────────────────────────────────────────────┘" | lolcat

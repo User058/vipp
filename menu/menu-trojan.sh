@@ -371,11 +371,11 @@ echo -e "│                    TROJAN MENU                  │" | lolcat
 echo -e "└─────────────────────────────────────────────────┘" | lolcat
 echo -e "┌───────────────────────────────────────────────┐" | lolcat
 echo -e "     ${BICyan}[${BIGreen}1${BICyan}]${BIGreen} Create Trojan Account ${NC}     "
-echo -e "     ${BICyan}[${BIGreen}2${BICyan}]${BIGreen} Trial Trojan Account  ${NC}    "
-echo -e "     ${BICyan}[${BIGreen}3${BICyan}]${BIGreen} Delete Account Trojan  ${NC}    "
-echo -e "     ${BICyan}[${BIGreen}4${BICyan}]${BIGreen} Renew Account Trojan  ${NC}    "
-echo -e "     ${BICyan}[${BIGreen}5${BICyan}]${BIGreen} Cek User Active XRAY  ${NC}   "
-echo -e "     ${BICyan}[${BIGreen}6${BICyan}]${BIGreen} Cek Detail Trojan  ${NC}    "
+echo -e "     ${BICyan}[${BIGreen}2${BICyan}]${BIGreen} Create Trial Trojan ${NC}    "
+echo -e "     ${BICyan}[${BIGreen}3${BICyan}]${BIGreen} Delete Trojan Account  ${NC}    "
+echo -e "     ${BICyan}[${BIGreen}4${BICyan}]${BIGreen} Renew Trojan Account ${NC}    "
+echo -e "     ${BICyan}[${BIGreen}5${BICyan}]${BIGreen} Check Active Users XRAY  ${NC}   "
+echo -e "     ${BICyan}[${BIGreen}6${BICyan}]${BIGreen} Check Trojan Details  ${NC}    "
 echo -e "     ${BICyan}[${BIGreen}0${BICyan}]${BIGreen} Back To Menu${NC}"
 echo -e "     ${BICyan}[${BIGreen}x${BICyan}]${BIGreen} Exit${NC}"
 echo -e "└──────────────────────────────────────────────┘" | lolcat
