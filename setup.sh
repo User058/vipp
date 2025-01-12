@@ -469,7 +469,7 @@ wget -q -O /usr/bin/menu-set "https://raw.githubusercontent.com/User058/vipp/mai
 wget -q -O /usr/bin/info "https://raw.githubusercontent.com/User058/vipp/main/options/info.sh"
 wget -q -O /usr/bin/infoserv "https://raw.githubusercontent.com/User058/vipp/main/options/infoserv.sh"
 wget -q -O /usr/bin/about "https://raw.githubusercontent.com/User058/vipp/main/options/about.sh"
-wget -q -O /usr/bin/sslh-fix-reboot "https://raw.githubusercontent.com/User058/vipp/main/sslh-fix-reboot.sh"
+wget -q -O /usr/bin/sslh-fix-reboot "https://raw.githubusercontent.com/User058/vipp/main/tools/sslh-fix-reboot.sh"
 cd /usr/sbin
 wget -q -O /usr/bin/mesinssh "https://raw.githubusercontent.com/User058/vipp/main/limit/mesinssh.sh"
 wget -q -O /usr/bin/cek-ssh "https://raw.githubusercontent.com/User058/vipp/main/limit/cek-ssh.sh"
