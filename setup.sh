@@ -495,7 +495,7 @@ wget -q -O /usr/bin/quota-vless-ws "https://raw.githubusercontent.com/User058/vi
 wget -q -O /usr/bin/quota-vless-grpc "https://raw.githubusercontent.com/User058/vipp/main/limit/quota-vless-grpc.sh"
 wget -q -O /usr/bin/quota-vmess-orbit "https://raw.githubusercontent.com/User058/vipp/main/limit/quota-vmess-ws-orbit.sh"
 wget -q -O /usr/bin/quota-vmess-orbit1 "https://raw.githubusercontent.com/User058/vipp/main/limit/quota-vmess-ws-orbit1.sh"
-wget -q -O /usr/bin/jam "https://raw.githubusercontent.com/User058/vipp/main/tools/jam.sh"
+wget -q -O /usr/bin/jam "https://raw.githubusercontent.com/User058/vipp/main/options/jam.sh"
 chmod +x /usr/bin/*
 cd 
 chmod +x /usr/bin/usernew
