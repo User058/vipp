@@ -199,7 +199,6 @@ clear && clear && clear
 clear;clear;clear
 # // Reading Your Input
 read -p "Input Your Domain : " domain
-read -p "Input Your NSdomain  : " nsdomain
 if [[ $domain == "" ]]; then
     clear
     echo -e "${EROR} No Input Detected !"
