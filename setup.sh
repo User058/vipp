@@ -461,7 +461,7 @@ wget -q -O /usr/bin/menu-ssh "https://raw.githubusercontent.com/User058/vipp/mai
 wget -q -O /usr/bin/menu-backup "https://raw.githubusercontent.com/User058/vipp/main/menu/menu-backup.sh"
 wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/User058/vipp/main/menu/menu.sh"
 wget -q -O /usr/bin/webmin "https://raw.githubusercontent.com/User058/vipp/main/options/webmin.sh"
-wget -q -O /usr/bin/xp "https://raw.githubusercontent.com/User058/vipp/main/xp.sh"
+wget -q -O /usr/bin/xp "https://raw.githubusercontent.com/User058/vipp/main/menu/xp.sh"
 wget -q -O /usr/bin/update "https://raw.githubusercontent.com/User058/vipp/main/options/update.sh"
 wget -q -O /usr/bin/addhost "https://raw.githubusercontent.com/User058/vipp/main/menu/addhost.sh"
 wget -q -O /usr/bin/certxray "https://raw.githubusercontent.com/User058/vipp/main/menu/crt.sh"

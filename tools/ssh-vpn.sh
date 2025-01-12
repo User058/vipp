@@ -476,7 +476,7 @@ rm -fr /etc/issue.net
 rm -fr /etc/issue.net.save
 sleep 1
 echo -e "[ ${green}INFO$NC ] Settings banner"
-wget -q -O /etc/issue.net "https://raw.githubusercontent.com/User058/vipp/main/issue.net"
+wget -q -O /etc/issue.net "https://raw.githubusercontent.com/User058/vipp/main/options/issue.net"
 chmod +x /etc/issue.net
 echo "Banner /etc/issue.net" >> /etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
