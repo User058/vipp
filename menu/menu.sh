@@ -269,7 +269,7 @@ echo -e " ${BIBlue}┌───────────────────�
 echo -e "    $y 1.$NC $BIBlue MENU SSH$NC                $y 8.$NC $BIBlue  BACKUP/RESTORE$NC" 
 echo -e "    $y 2.$NC $BIBlue MENU VMESS$NC              $y 9.$NC $BIBlue  SETTINGS$NC"    
 echo -e "    $y 3.$NC $BIBlue MENU VLESS$NC              $y 10.$NC $BIBlue ADD HOST/DOMAIN$NC"    
-echo -e "    $y 4.$NC $BIBlue MENU TROJAN$NC             $y 11.$NC $BIBlue RENEW CERTXRAY SCRIPT$NC" 
+echo -e "    $y 4.$NC $BIBlue MENU TROJAN$NC             $y 11.$NC $BIBlue CHECK RUNNING SERVICES$NC" 
 echo -e "    $y 5.$NC $BIBlue SHADOWSOCKS$NC             $y 12.$NC $BIBlue UPDATE$NC" 
 echo -e "    $y 6.$NC $BIBlue BANDWIDTH-INFO$NC          $y 13.$NC $BIBlue RESTART SERVICE$NC"    
 echo -e "    $y 7.$NC $BIBlue REBOOT$NC             	 $y x.$NC $BIBlue  EXIT SCRIPT$NC"  
@@ -288,7 +288,7 @@ case $opt in
 8) clear ; menu-backup ;;
 9) clear ; menu-set ;;
 10)clear ; addhost ;;
-11)clear ; certxray ;;
+11)clear ; running ;;
 12)clear ; update;;
 13)clear ; restart;;
 0) clear ; menu ;;
