@@ -105,7 +105,7 @@ echo -e "└──────────────────────�
 read -p "Username         : " user
 read -p "Quota (GB)       : " quota
 read -p "Max Ip login     : " iplimit
-read -p "Masaaktif        : " masaaktif
+read -p "Days        	  : " masaaktif
 
 #QUOTA
 if [[ $quota -gt 0 ]]; then

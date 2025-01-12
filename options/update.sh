@@ -32,10 +32,10 @@ echo -e "│                 PROSES UPDATE                   │" | lolcat
 echo -e "└─────────────────────────────────────────────────┘" | lolcat
 echo -e "\e[0;32mNew Version Downloading started!\e[0m"
 cd /usr/bin
-wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/User058/vipp/main/add-ws.sh"
-wget -q -O /usr/bin/add-ssws "https://raw.githubusercontent.com/User058/vipp/main/add-ssws.sh"
-wget -q -O /usr/bin/add-vless "https://raw.githubusercontent.com/User058/vipp/main/add-vless.sh"
-wget -q -O /usr/bin/add-tr "https://raw.githubusercontent.com/User058/vipp/main/add-tr.sh"
+wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/User058/vipp/main/menu/add-ws.sh"
+wget -q -O /usr/bin/add-ssws "https://raw.githubusercontent.com/User058/vipp/main/menu/add-ssws.sh"
+wget -q -O /usr/bin/add-vless "https://raw.githubusercontent.com/User058/vipp/main/menu/add-vless.sh"
+wget -q -O /usr/bin/add-tr "https://raw.githubusercontent.com/User058/vipp/main/menu/add-tr.sh"
 wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/User058/vipp/main/menu/usernew.sh"
 wget -q -O /usr/bin/autoreboot "https://raw.githubusercontent.com/User058/vipp/main/options/autoreboot.sh"
 wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/User058/vipp/main/options/restart.sh"
@@ -53,7 +53,7 @@ wget -q -O /usr/bin/menu-ssh "https://raw.githubusercontent.com/User058/vipp/mai
 wget -q -O /usr/bin/menu-backup "https://raw.githubusercontent.com/User058/vipp/main/menu/menu-backup.sh"
 wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/User058/vipp/main/menu/menu.sh"
 wget -q -O /usr/bin/webmin "https://raw.githubusercontent.com/User058/vipp/main/options/webmin.sh"
-wget -q -O /usr/bin/xp "https://raw.githubusercontent.com/User058/vipp/main/xp.sh"
+wget -q -O /usr/bin/xp "https://raw.githubusercontent.com/User058/vipp/main/menu/xp.sh"
 wget -q -O /usr/bin/update "https://raw.githubusercontent.com/User058/vipp/main/options/update.sh"
 #wget -q -O /usr/bin/menu-theme "https://raw.githubusercontent.com/User058/vipp/main/menu/menu-theme.sh"
 wget -q -O /usr/bin/info "https://raw.githubusercontent.com/User058/vipp/main/options/info.sh"
