@@ -109,19 +109,11 @@ read -p "Username         : " user
 read -p "Quota (GB)       : " quota
 read -p "Max Ip login     : " iplimit
 read -p "Days	          : " masaaktif
-#QUOTA
-if [[ $quota -gt 0 ]]; then
-echo -e "$[$quota * 1024 * 1024 * 1024]" > /etc/cobek/limit/vmess/quota/$user
-else
-echo > /dev/null
-fi
 #IPLIMIT
 if [[ $iplimit -gt 0 ]]; then
-echo -e "$iplimit" > /etc/cobek/limit/vmess/ip/$user
 else
 echo > /dev/null
 fi
-
 		CLIENT_EXISTS=$(grep -w $user /etc/xray/config.json | wc -l)
 
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then
