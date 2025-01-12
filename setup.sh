@@ -439,11 +439,11 @@ wget -q https://raw.githubusercontent.com/User058/vipp/main/backup/set-br.sh && 
 
 # // Download Data
 echo -e "${GREEN}Download Data${NC}"
-wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/User058/vipp/main/usernew.sh"
-wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/User058/vipp/main/add-ws.sh"
-wget -q -O /usr/bin/add-ssws "https://raw.githubusercontent.com/User058/vipp/main/add-ssws.sh"
-wget -q -O /usr/bin/add-vless "https://raw.githubusercontent.com/User058/vipp/main/add-vless.sh"
-wget -q -O /usr/bin/add-tr "https://raw.githubusercontent.com/User058/vipp/main/add-tr.sh"
+wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/User058/vipp/main/menu/usernew.sh"
+wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/User058/vipp/main/menu/add-ws.sh"
+wget -q -O /usr/bin/add-ssws "https://raw.githubusercontent.com/User058/vipp/main/menu/add-ssws.sh"
+wget -q -O /usr/bin/add-vless "https://raw.githubusercontent.com/User058/vipp/main/menu/add-vless.sh"
+wget -q -O /usr/bin/add-tr "https://raw.githubusercontent.com/User058/vipp/main/menu/add-tr.sh"
 wget -q -O /usr/bin/autoreboot "https://raw.githubusercontent.com/User058/vipp/main/options/autoreboot.sh"
 wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/User058/vipp/main/options/restart.sh"
 wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/User058/vipp/main/options/tendang.sh"
@@ -569,9 +569,6 @@ menu
 END
 chmod 644 /root/.profile
 
-if [ -f "/root/log-install.txt" ]; then
-rm -fr /root/log-install.txt 
-fi
 if [ -f "/etc/afak.conf" ]; then
 rm -fr /etc/afak.conf 
 fi
@@ -590,50 +587,6 @@ else
 gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
-echo  " "
-echo "=====================-[ PREMIUM VVIP ]-===================="
-echo  ""
-echo  "------------------------------------------------------------"
-echo  ""
-echo  "   >>> Service & Port"  | tee -a log-install.txt
-echo  "   - OpenSSH                 : 22"  | tee -a log-install.txt
-echo  "   - SSH Websocket           : 80" | tee -a log-install.txt
-echo  "   - SSH SSL Websocket       : 443" | tee -a log-install.txt
-echo  "   - Stunnel5                : 447, 777" | tee -a log-install.txt
-echo  "   - Dropbear                : 109, 143" | tee -a log-install.txt
-echo  "   - Badvpn                  : 7100-7300" | tee -a log-install.txt
-echo  "   - Nginx                   : 81" | tee -a log-install.txt
-echo  "   - XRAY  Vmess TLS         : 443" | tee -a log-install.txt
-echo  "   - XRAY  Vmess None TLS    : 80" | tee -a log-install.txt
-echo  "   - XRAY  Vless TLS         : 443" | tee -a log-install.txt
-echo  "   - XRAY  Vless None TLS    : 80" | tee -a log-install.txt
-echo  "   - Trojan GRPC             : 443" | tee -a log-install.txt
-echo  "   - Trojan WS               : 443" | tee -a log-install.txt
-echo  "   - Sodosok WS/GRPC         : 443" | tee -a log-install.txt
-echo  ""  | tee -a log-install.txt
-echo  "   >>> Server Information & Other Features"  | tee -a log-install.txt
-echo  "   - Timezone                : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
-echo  "   - Fail2Ban                : [ON]"  | tee -a log-install.txt
-echo  "   - Dflate                  : [ON]"  | tee -a log-install.txt
-echo  "   - IPtables                : [ON]"  | tee -a log-install.txt
-echo  "   - Auto-Reboot             : [ON]"  | tee -a log-install.txt
-#echo "   - IPv6                    : [OFF]"  | tee -a log-install.txt
-echo  "   - Autoreboot              : 00.00 GMT +7" | tee -a log-install.txt
-#echo "   - Autobackup Data" | tee -a log-install.txt
-echo  "   - AutoKill Multi Login User" | tee -a log-install.txt
-echo  "   - Auto Delete Expired Account" | tee -a log-install.txt
-echo  "   - Fully automatic script" | tee -a log-install.txt
-echo  "   - VPS settings" | tee -a log-install.txt
-echo  "   - Restore Data" | tee -a log-install.txt
-echo  "   - Full Orders For Various Services" | tee -a log-install.txt
-echo ""
-echo  ""
-echo  "------------------------------------------------------------"
-echo  ""
-echo  "================-[ SCRIPT PREMIUM VVIP ]-================"
-echo -e ""
-echo  ""
-echo  "" | tee -a log-install.txt
 rm -fr /root/limit
 rm -fr /root/weleh.sh 
 rm -fr /root/arzsource.sh 
@@ -693,7 +646,51 @@ Client Name   : $Name
 ==================================
 
 "
+echo  " "
+echo "=====================-[ PREMIUM VVIP ]-===================="
+echo  ""
+echo  "------------------------------------------------------------"
+echo  ""
+echo  "   >>> Service & Port"  | tee -a log-install.txt
+echo  "   - OpenSSH                 : 22"  | tee -a log-install.txt
+echo  "   - SSH Websocket           : 80" | tee -a log-install.txt
+echo  "   - SSH SSL Websocket       : 443" | tee -a log-install.txt
+echo  "   - Stunnel5                : 447, 777" | tee -a log-install.txt
+echo  "   - Dropbear                : 109, 143" | tee -a log-install.txt
+echo  "   - Badvpn                  : 7100-7300" | tee -a log-install.txt
+echo  "   - Nginx                   : 81" | tee -a log-install.txt
+echo  "   - XRAY  Vmess TLS         : 443" | tee -a log-install.txt
+echo  "   - XRAY  Vmess None TLS    : 80" | tee -a log-install.txt
+echo  "   - XRAY  Vless TLS         : 443" | tee -a log-install.txt
+echo  "   - XRAY  Vless None TLS    : 80" | tee -a log-install.txt
+echo  "   - Trojan GRPC             : 443" | tee -a log-install.txt
+echo  "   - Trojan WS               : 443" | tee -a log-install.txt
+echo  "   - Sodosok WS/GRPC         : 443" | tee -a log-install.txt
+echo  ""  | tee -a log-install.txt
+echo  "   >>> Server Information & Other Features"  | tee -a log-install.txt
+echo  "   - Timezone                : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
+echo  "   - Fail2Ban                : [ON]"  | tee -a log-install.txt
+echo  "   - Dflate                  : [ON]"  | tee -a log-install.txt
+echo  "   - IPtables                : [ON]"  | tee -a log-install.txt
+echo  "   - Auto-Reboot             : [ON]"  | tee -a log-install.txt
+#echo "   - IPv6                    : [OFF]"  | tee -a log-install.txt
+echo  "   - Autoreboot              : 00.00 GMT +7" | tee -a log-install.txt
+#echo "   - Autobackup Data" | tee -a log-install.txt
+echo  "   - AutoKill Multi Login User" | tee -a log-install.txt
+echo  "   - Auto Delete Expired Account" | tee -a log-install.txt
+echo  "   - Fully automatic script" | tee -a log-install.txt
+echo  "   - VPS settings" | tee -a log-install.txt
+echo  "   - Restore Data" | tee -a log-install.txt
+echo  "   - Full Orders For Various Services" | tee -a log-install.txt
+echo ""
+echo  ""
+echo  "------------------------------------------------------------"
+echo  ""
+echo  "================-[ SCRIPT PREMIUM VVIP ]-================"
+echo -e ""
+echo  ""
+echo  "" | tee -a log-install.txt
 history -c
-echo -e "Installation Success; Rebooting In 5 Secs !!"
+echo -e "Installation Successful; Rebooting In 5 Secs !!"
 sleep 5
 reboot
