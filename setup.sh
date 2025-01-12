@@ -469,6 +469,36 @@ wget -q -O /usr/bin/infoserv "https://raw.githubusercontent.com/User058/vipp/mai
 wget -q -O /usr/bin/about "https://raw.githubusercontent.com/User058/vipp/main/options/about.sh"
 wget -q -O /usr/bin/jam "https://raw.githubusercontent.com/User058/vipp/main/options/jam.sh"
 chmod +x /usr/bin/*
+cd 
+chmod +x /usr/bin/usernew
+chmod +x /usr/bin/add-ws
+chmod +x /usr/bin/add-ssws
+chmod +x /usr/bin/add-vless
+chmod +x /usr/bin/add-tr
+chmod +x /usr/bin/autoreboot
+chmod +x /usr/bin/restart
+chmod +x /usr/bin/tendang
+chmod +x /usr/bin/clearlog
+chmod +x /usr/bin/running
+chmod +x /usr/bin/speedtest
+chmod +x /usr/bin/cek-bandwidth
+chmod +x /usr/bin/limitspeed
+chmod +x /usr/bin/menu-vless
+chmod +x /usr/bin/menu-vmess
+chmod +x /usr/bin/menu-ss
+chmod +x /usr/bin/menu-trojan
+chmod +x /usr/bin/menu-ssh
+chmod +x /usr/bin/menu-backup
+chmod +x /usr/bin/menu
+chmod +x /usr/bin/webmin
+chmod +x /usr/bin/xp
+chmod +x /usr/bin/update
+chmod +x /usr/bin/addhost
+chmod +x /usr/bin/menu-set
+chmod +x /usr/bin/info
+chmod +x /usr/bin/infoserv
+chmod +x /usr/bin/about
+chmod +x /usr/bin/jam
 
 #cat > /etc/cron.d/re_otm <<-END
 #SHELL=/bin/sh
