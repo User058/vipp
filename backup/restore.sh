@@ -50,7 +50,6 @@ sleep 1
 cp -r /root/backup/scrz-prem /var/lib/ &> /dev/null
 cp -r /root/backup/.acme.sh /root/ &> /dev/null
 cp -r /root/backup/arzvpn /etc/ &> /dev/null
-cp -r /root/backup/xray /etc/ &> /dev/null
 cp -r /root/backup/public_html /home/vps/ &> /dev/null
 cp -r /root/backup/crontab /etc/ &> /dev/null
 cp -r /root/backup/cron.d /etc/ &> /dev/null
