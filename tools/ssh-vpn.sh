@@ -238,9 +238,9 @@ echo -e "[ ${green}INFO$NC ] Disable ipv6"
 echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6 >/dev/null 2>&1
 sed -i '$ i\echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6' /etc/rc.local >/dev/null 2>&1
 
-# set time UTC+3
-sleep 1
-echo -e "[ ${green}INFO$NC ] Set zone local time to Africa/Nairobi UTC+3"
+# set time EAT-3
+sleep 3
+echo -e "[ ${green}INFO$NC ] Set Zone local time to Africa/Nairobi EAT-3"
 ln -fs /usr/share/zoneinfo/Africa/Nairobi /etc/localtime
 
 # set locale
