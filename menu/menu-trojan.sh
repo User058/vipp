@@ -256,7 +256,7 @@ done
 rm -rf /tmp/other.txt
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
-menu
+menu-trojan
 }
 function renewws(){
 clear
@@ -272,7 +272,7 @@ echo -e "└──────────────────────�
                 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
         echo ""
         read -n 1 -s -r -p "Press any key to back on menu"
-        menu
+        menu-trojan
         fi
 
         clear
@@ -286,7 +286,7 @@ echo -e "└──────────────────────�
     echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
         read -rp "Input Username : " user
     if [ -z $user ]; then
-    menu
+    menu-trojan
     else
     read -p "Expired (days): " masaaktif
     exp=$(grep -wE "^#! $user" "/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq)
@@ -313,7 +313,7 @@ echo -e "│               USER058STR                │" | lolcat
 echo -e "└─────────────────────────────────────────────────┘" | lolcat
     echo ""
     read -n 1 -s -r -p "Press any key to back on menu"
-    menu
+    menu-trojan
   fi
 }
 function delws() {
@@ -328,7 +328,7 @@ echo -e "└──────────────────────�
                 echo ""
                 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
                 read -n 1 -s -r -p "Press any key to back on menu"
-        menu
+        menu-trojan
         fi
 
         clear
@@ -343,7 +343,7 @@ echo -e "└──────────────────────�
     echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
         read -rp "Input Username : " user
     if [ -z $user ]; then
-    menu
+    menu-trojan
     else
     exp=$(grep -wE "^#! $user" "/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq)
     sed -i "/^#! $user $exp/,/^},{/d" /etc/xray/config.json
@@ -362,7 +362,7 @@ echo -e "└──────────────────────�
     echo ""
     read -n 1 -s -r -p "Press any key to back on menu"
     
-    menu
+    menu-trojan
     fi
 }
 clear

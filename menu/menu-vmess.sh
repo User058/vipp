@@ -380,7 +380,7 @@ rm -rf /tmp/other.txt
 
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
-menu
+menu-vmess
 }
 function renewws(){
 clear
@@ -396,7 +396,7 @@ echo -e "└──────────────────────�
                 echo -e "${BICyan}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
         echo ""
         read -n 1 -s -r -p "Press any key to back on menu"
-        menu
+        menu-vmess
         fi
 
         clear
@@ -410,7 +410,7 @@ echo -e "└──────────────────────�
     echo -e "${BICyan}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
         read -rp "Input Username : " user
     if [ -z $user ]; then
-    menu
+    menu-vmess
     else
     read -p "Expired (days): " masaaktif
     exp=$(grep -wE "^### $user" "/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq)
@@ -433,7 +433,7 @@ echo -e "└──────────────────────�
     echo -e "${BICyan}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
     echo ""
     read -n 1 -s -r -p "Press any key to back on menu"
-    menu
+    menu-vmess
   fi
 }
 function delws() {
@@ -448,7 +448,7 @@ echo -e "└──────────────────────�
                 echo ""
                 echo -e "${BICyan}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
                 read -n 1 -s -r -p "Press any key to back on menu"
-        menu
+        menu-vmess
         fi
 
         clear
@@ -463,7 +463,7 @@ echo -e "└──────────────────────�
     echo -e "${BICyan}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
         read -rp "Input Username : " user
     if [ -z $user ]; then
-    menu
+    menu-vmess
     else
     exp=$(grep -wE "^### $user" "/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq)
     sed -i "/^### $user $exp/,/^},{/d" /etc/xray/config.json
@@ -478,7 +478,7 @@ echo -e "└──────────────────────�
     echo ""
     read -n 1 -s -r -p "Press any key to back on menu"
     
-    menu
+    menu-vmess
     fi
 }
 

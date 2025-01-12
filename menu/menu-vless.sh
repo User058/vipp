@@ -268,7 +268,7 @@ echo -e "│               USER058 STR              │" | lolcat
 echo -e "└─────────────────────────────────────────────────┘" | lolcat
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
-menu
+menu-vless
 }
 function renewws(){
 clear
@@ -284,7 +284,7 @@ echo -e "└──────────────────────�
                 echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
         echo ""
         read -n 1 -s -r -p "Press any key to back on menu"
-        menu
+        menu-vless
         fi
 
         clear
@@ -298,7 +298,7 @@ echo -e "└──────────────────────�
     echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
         read -rp "Input Username : " user
     if [ -z $user ]; then
-    menu
+    menu-vless
     else
     read -p "Expired (days): " masaaktif
     exp=$(grep -wE "^#& $user" "/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq)
@@ -325,7 +325,7 @@ echo -e "│               USER058 STR              │" | lolcat
 echo -e "└─────────────────────────────────────────────────┘" | lolcat
 echo ""
     read -n 1 -s -r -p "Press any key to back on menu"
-    menu
+    menu-vless
   fi
 }
 function delws() {
@@ -340,7 +340,7 @@ echo -e "└──────────────────────�
                 echo ""
                 echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
                 read -n 1 -s -r -p "Press any key to back on menu"
-        menu
+        menu-vless
         fi
 
         clear
@@ -355,7 +355,7 @@ echo -e "└──────────────────────�
     echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
         read -rp "Input Username : " user
     if [ -z $user ]; then
-    menu
+    menu-vless
     else
     exp=$(grep -wE "^#& $user" "/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq)
     sed -i "/^#& $user $exp/,/^},{/d" /etc/xray/config.json
@@ -374,7 +374,7 @@ echo -e "└──────────────────────�
 echo ""
     read -n 1 -s -r -p "Press any key to back on menu"
     
-    menu
+    menu-vless
     fi
 }
 clear

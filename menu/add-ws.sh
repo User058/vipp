@@ -341,9 +341,9 @@ echo -e "Link None => ${vmesslink2}"
 echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"                
 echo -e "Link Grpc => ${vmesslink3}"
 echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"    
-Format OpenClash : https://${domain}:81/vmess-$user.txt            
+#Format OpenClash : https://${domain}:81/vmess-$user.txt            
 echo -e "Expired => $exp"
 echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"     
 echo -e ""      
 read -n 1 -s -r -p "Press any key to back on menu"
-menu
+add-ws
