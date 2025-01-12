@@ -36,7 +36,7 @@ wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/User058/vipp/main/
 wget -q -O /usr/bin/add-ssws "https://raw.githubusercontent.com/User058/vipp/main/add-ssws.sh"
 wget -q -O /usr/bin/add-vless "https://raw.githubusercontent.com/User058/vipp/main/add-vless.sh"
 wget -q -O /usr/bin/add-tr "https://raw.githubusercontent.com/User058/vipp/main/add-tr.sh"
-wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/User058/vipp/main/usernew.sh"
+wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/User058/vipp/main/menu/usernew.sh"
 wget -q -O /usr/bin/autoreboot "https://raw.githubusercontent.com/User058/vipp/main/options/autoreboot.sh"
 wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/User058/vipp/main/options/restart.sh"
 wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/User058/vipp/main/options/tendang.sh"
