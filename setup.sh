@@ -260,12 +260,6 @@ chmod +x /root/.acme.sh/acme.sh
 # // Success
 echo -e "${OKEY} Your Domain : $domain"
 sleep 2
-
-# // Else Do
-else
-    echo -e "${EROR} Please Choose 1 & 2 Only !"
-    exit 1
-fi
 function make_folder_xray() {
 #mkdir folder
  mkdir -p /etc/cobek
