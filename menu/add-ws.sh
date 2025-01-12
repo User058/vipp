@@ -108,7 +108,7 @@ echo -e "└──────────────────────�
 read -p "Username         : " user
 read -p "Quota (GB)       : " quota
 read -p "Max Ip login     : " iplimit
-read -p "Masaaktif        : " masaaktif
+read -p "Days	          : " masaaktif
 #QUOTA
 if [[ $quota -gt 0 ]]; then
 echo -e "$[$quota * 1024 * 1024 * 1024]" > /etc/cobek/limit/vmess/quota/$user
@@ -134,7 +134,7 @@ echo -e "└──────────────────────�
 			echo ""
 			echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 			read -n 1 -s -r -p "Press any key to back on menu"
-menu
+menu-vmess
 		fi
 	done
 
@@ -342,4 +342,4 @@ echo -e "Expired => $exp"
 echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"     
 echo -e ""      
 read -n 1 -s -r -p "Press any key to back on menu"
-add-ws
+menu-vmess
