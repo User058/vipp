@@ -324,6 +324,8 @@ echo -e "└──────────────────────�
 echo -e ""                
 echo -e "Username     : $user"
 echo -e "Host/IP      : $domain"
+echo -e "CITY         : $(cat /root/.mycity)"
+echo -e "ISP          : $(cat /root/.myisp)"
 echo -e "Port ssl/tls : 443"
 echo -e "Port non tls : 80"                                        
 echo -e "Key          : $uuid"
