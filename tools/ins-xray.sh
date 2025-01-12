@@ -104,7 +104,7 @@ apt -y install chrony
 timedatectl set-ntp true
 #systemctl enable chronyd && systemctl restart chronyd
 systemctl enable chrony && systemctl restart chrony
-timedatectl set-timezone Asia/Jakarta
+timedatectl set-timezone Africa/Nairobi
 #chronyc sourcestats -v
 #chronyc tracking -v
 apt install curl pwgen openssl netcat cron -y
