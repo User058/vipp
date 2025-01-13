@@ -148,7 +148,7 @@ asu=`cat<<EOF
       {
       "v": "2",
       "ps": "${user}",
-      "add": "${domain}",
+      "add": "104.21.51.108",
       "port": "443",
       "id": "${uuid}",
       "aid": "0",
@@ -163,7 +163,7 @@ ask=`cat<<EOF
       {
       "v": "2",
       "ps": "${user}",
-      "add": "${domain}",
+      "add": "104.21.51.108",
       "port": "80",
       "id": "${uuid}",
       "aid": "0",
@@ -178,7 +178,7 @@ grpc=`cat<<EOF
       {
       "v": "2",
       "ps": "${user}",
-      "add": "${domain}",
+      "add": "104.21.51.108",
       "port": "443",
       "id": "${uuid}",
       "aid": "0",
@@ -209,7 +209,7 @@ cat >/var/www/html/vmess-$user.txt <<-END
 
 - name: Vmess-$user-WS TLS
   type: vmess
-  server: ${domain}
+  server: 104.21.51.108
   port: 443
   uuid: ${uuid}
   alterId: 0
@@ -228,7 +228,7 @@ cat >/var/www/html/vmess-$user.txt <<-END
 
 - name: Vmess-$user-WS Non TLS
   type: vmess
-  server: ${domain}
+  server: 104.21.51.108
   port: 80
   uuid: ${uuid}
   alterId: 0
@@ -246,7 +246,7 @@ cat >/var/www/html/vmess-$user.txt <<-END
 # Format Vmess gRPC
 
 - name: Vmess-$user-gRPC (SNI)
-  server: ${domain}
+  server: 104.21.51.108
   port: 443
   type: vmess
   uuid: ${uuid}
@@ -281,8 +281,8 @@ URL="$URL"
 TEXT="<code>☉————————————————————————☉</code>
 <code>🍀Xray/Vmess Account🍀</code>
 <code>☉————————————————————————☉</code>
-<code> "${z}${r} ${NC}${z}CITY          ${NC}: $CITY"
-<code> "${z}${r} ${NC}${z}ISP           ${NC}: $ISP"
+<code> "$(cat /root/.mycity)$"
+<code> "$(cat /root/.myisp)$"
 <code>☉————————————————————————☉</code>
 <code>Remarks   : ${user}
 Domain    : ${domain}
