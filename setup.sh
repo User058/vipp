@@ -165,7 +165,7 @@ exit 1
 fi
 clear
 fi
-echo -e "${GREEN}Starting Installation............${NC}"
+echo -e "${GREEN} Installation Starting............${NC}"
 # // Go To Root Directory
 cd /root/
 # // Remove
@@ -237,7 +237,7 @@ curl ipinfo.io/city?token=7ce50028ba7184 > /root/.city
 curl ipinfo.io/org?token=7ce50028ba7184 > /root/.myisp
 curl ipinfo.io/city?token=7ce50028ba7184 > /root/.mycity
 curl ifconfig.me > /root/.ip
-curl ipinfo.io/region > /root/.region
+curl ipinfo.io/region?token=7ce50028ba7184 > /root/.region
 curl ifconfig.me > /root/.myip
 # // Making Certificate
 clear
