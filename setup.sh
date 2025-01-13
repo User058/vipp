@@ -228,18 +228,14 @@ mkdir -p /usr/local/etc/xray
 echo "$domain" > /etc/${Auther}/domain.txt
 echo "IP=$domain" > /var/lib/scrz-prem/ipvps.conf
 echo "$domain" > /root/domain
-echo $nsdomain >/etc/xray/dns
-echo $nsdomain >/root/nsdomain
-echo $nsdomain >/etc/xray/nsdomain
-echo $nsdomain >/etc/slowdns/nsdomain
 domain=$(cat /root/domain)
 
 #SETUP ALL INFORMATION
 cp -r /root/domain /etc/xray/domain
-curl ipinfo.io/org > /root/.isp
-curl ipinfo.io/city > /root/.city
-curl ipinfo.io/org > /root/.myisp
-curl ipinfo.io/city > /root/.mycity
+curl ipinfo.io/org?token=7ce50028ba7184 > /root/.isp
+curl ipinfo.io/city?token=7ce50028ba7184 > /root/.city
+curl ipinfo.io/org?token=7ce50028ba7184 > /root/.myisp
+curl ipinfo.io/city?token=7ce50028ba7184 > /root/.mycity
 curl ifconfig.me > /root/.ip
 curl ipinfo.io/region > /root/.region
 curl ifconfig.me > /root/.myip
@@ -549,7 +545,7 @@ echo  "   - Dflate                  : [ON]"  | tee -a log-install.txt
 echo  "   - IPtables                : [ON]"  | tee -a log-install.txt
 echo  "   - Auto-Reboot             : [ON]"  | tee -a log-install.txt
 #echo "   - IPv6                    : [OFF]"  | tee -a log-install.txt
-echo  "   - Autoreboot              : 00.00 GMT +7" | tee -a log-install.txt
+echo  "   - Autoreboot              : 00.00 EAT-3" | tee -a log-install.txt
 #echo "   - Autobackup Data" | tee -a log-install.txt
 echo  "   - AutoKill Multi Login User" | tee -a log-install.txt
 echo  "   - Auto Delete Expired Account" | tee -a log-install.txt
