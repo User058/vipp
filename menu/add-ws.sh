@@ -98,6 +98,21 @@ domain=$(cat /etc/xray/domain)
 else
 domain=$IP
 fi
+checking_sc
+clear
+cd
+ISP=$(cat /etc/xray/isp)
+CITY=$(cat /etc/xray/city)
+author=$(cat /etc/profil)
+TIMES="10"
+CHATID=$(cat /etc/per/id)
+KEY=$(cat /etc/per/token)
+URL="https://api.telegram.org/bot$KEY/sendMessage"
+domain=`cat /etc/xray/domain`
+CHATID2=$(cat /etc/perlogin/id)
+KEY2=$(cat /etc/perlogin/token)
+URL2="https://api.telegram.org/bot$KEY2/sendMessage"
+cd
 
 tls="$(cat ~/log-install.txt | grep -w "Vmess TLS" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vmess None TLS" | cut -d: -f2|sed 's/ //g')"
