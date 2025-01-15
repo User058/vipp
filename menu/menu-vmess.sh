@@ -109,18 +109,18 @@ clear
 MYIP=$(wget -qO- ipv4.icanhazip.com);
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/config.json")
         if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
-echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│               CHECK DETAIL VMESS                │" | lolcat
-echo -e "└─────────────────────────────────────────────────┘" | lolcat
+echo -e "┌─────────────────────────────────────────────────┐" | 
+echo -e "│               CHECK DETAIL VMESS                │" | 
+echo -e "└─────────────────────────────────────────────────┘" | 
                 echo ""
                 echo "You have no existing clients!"
                 clear
                 exit 1
         fi
 
-echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│               CHECK DETAIL VMESS                │" | lolcat
-echo -e "└─────────────────────────────────────────────────┘" | lolcat
+echo -e "┌─────────────────────────────────────────────────┐" | 
+echo -e "│               CHECK DETAIL VMESS                │" | 
+echo -e "└─────────────────────────────────────────────────┘" | 
         echo " Select the existing client to view the config"
         echo " Press CTRL+C to return"
 echo -e "${BICyan}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
@@ -342,9 +342,9 @@ function cekws() {
 clear
 echo -n > /tmp/other.txt
 data=( `cat /etc/xray/config.json | grep '###' | cut -d ' ' -f 2 | sort | uniq`);
-echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│                 XRAY USER LOGIN                 │" | lolcat
-echo -e "└─────────────────────────────────────────────────┘" | lolcat
+echo -e "┌─────────────────────────────────────────────────┐" | 
+echo -e "│                 XRAY USER LOGIN                 │" | 
+echo -e "└─────────────────────────────────────────────────┘" | 
 for akun in "${data[@]}"
 do
 if [[ -z "$akun" ]]; then
@@ -387,9 +387,9 @@ clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/config.json")
         if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
                 clear
-echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│                XRAY VMESS RENEW                 │" | lolcat
-echo -e "└─────────────────────────────────────────────────┘" | lolcat
+echo -e "┌─────────────────────────────────────────────────┐" | 
+echo -e "│                XRAY VMESS RENEW                 │" | 
+echo -e "└─────────────────────────────────────────────────┘" | 
                 echo ""
                 echo "You have no existing clients!"
                 echo ""
@@ -400,9 +400,9 @@ echo -e "└──────────────────────�
         fi
 
         clear
-echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│                XRAY VMESS RENEW                 │" | lolcat
-echo -e "└─────────────────────────────────────────────────┘" | lolcat
+echo -e "┌─────────────────────────────────────────────────┐" | 
+echo -e "│                XRAY VMESS RENEW                 │" | 
+echo -e "└─────────────────────────────────────────────────┘" | 
     echo ""
         grep -E "^### " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | column -t | sort | uniq
     echo ""
@@ -423,9 +423,9 @@ echo -e "└──────────────────────�
     sed -i "/### $user/c\### $user $exp4" /etc/xray/config.json
     systemctl restart xray > /dev/null 2>&1
     clear
-echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│            XRAY VMESS RENEW SUCCESS             │" | lolcat
-echo -e "└─────────────────────────────────────────────────┘" | lolcat
+echo -e "┌─────────────────────────────────────────────────┐" | 
+echo -e "│            XRAY VMESS RENEW SUCCESS             │" | 
+echo -e "└─────────────────────────────────────────────────┘" | 
     echo ""
     echo " Client Name : $user"
     echo " Expired On  : $exp4"
@@ -440,9 +440,9 @@ function delws() {
 clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/config.json")
         if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
-echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│               DELETE XRAY VMESS                 │" | lolcat
-echo -e "└─────────────────────────────────────────────────┘" | lolcat
+echo -e "┌─────────────────────────────────────────────────┐" | 
+echo -e "│               DELETE XRAY VMESS                 │" | 
+echo -e "└─────────────────────────────────────────────────┘" | 
                 echo ""
                 echo "You have no existing clients!"
                 echo ""
@@ -452,9 +452,9 @@ echo -e "└──────────────────────�
         fi
 
         clear
-echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│               DELETE XRAY VMESS                 │" | lolcat
-echo -e "└─────────────────────────────────────────────────┘" | lolcat
+echo -e "┌─────────────────────────────────────────────────┐" | 
+echo -e "│               DELETE XRAY VMESS                 │" | 
+echo -e "└─────────────────────────────────────────────────┘" | 
     echo "  User       Expired  " 
         echo -e "${BICyan}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
         grep -E "^### " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | column -t | sort | uniq
@@ -469,9 +469,9 @@ echo -e "└──────────────────────�
     sed -i "/^### $user $exp/,/^},{/d" /etc/xray/config.json
     systemctl restart xray > /dev/null 2>&1
     clear
-echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│               DELETE XRAY SUCCESS               │" | lolcat
-echo -e "└─────────────────────────────────────────────────┘" | lolcat
+echo -e "┌─────────────────────────────────────────────────┐" | 
+echo -e "│               DELETE XRAY SUCCESS               │" | 
+echo -e "└─────────────────────────────────────────────────┘" | 
     echo " Client Name : $user"
     echo " Expired On  : $exp"
     echo -e "${BICyan}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
@@ -483,10 +483,10 @@ echo -e "└──────────────────────�
 }
 
 clear
-echo -e "\e[32m════════════════════════════════════════" | lolcat
+echo -e "\e[32m════════════════════════════════════════" | 
 echo -e "             ═══[ VMESS ]═══"
-echo -e "\e[32m════════════════════════════════════════" | lolcat
-echo -e "┌─────────────────────────────────────────────────┐" | lolcat
+echo -e "\e[32m════════════════════════════════════════" | 
+echo -e "┌─────────────────────────────────────────────────┐" | 
 echo -e "${BICyan}[${BIGreen}1${BICyan}]${BIGreen} Create Vmess Account  ${NC}   "
 echo -e "${BICyan}[${BIGreen}2${BICyan}]${BIGreen} Create Trial Vmess   ${NC}  "
 echo -e "${BICyan}[${BIGreen}3${BICyan}]${BIGreen} Delete Vmess Account ${NC}   "
@@ -495,7 +495,7 @@ echo -e "${BICyan}[${BIGreen}5${BICyan}]${BIGreen} Check Vmess Users Login   ${N
 echo -e "${BICyan}[${BIGreen}6${BICyan}]${BIGreen} Vmess Account Details  ${NC}   "
 echo -e "${BICyan}[${BIGreen}0${BICyan}]${BIGreen} BACK TO MENU${NC}"
 echo -e "${BICyan}[${BIGreen}x${BICyan}]${BIGreen} EXIT   ${NC}  "
-echo -e "└──────────────────────────────────────────────────┘" | lolcat
+echo -e "└──────────────────────────────────────────────────┘" | 
 echo ""
 read -p " Select menu : " opt
 echo -e ""
