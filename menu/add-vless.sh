@@ -1,94 +1,13 @@
 #!/bin/bash
-
-BIBlack='\033[1;90m'      # Black
-BIRed='\033[1;91m'        # Red
-BIGreen='\033[1;92m'      # Green
-BIYellow='\033[1;93m'     # Yellow
-BIBlue='\033[1;94m'       # Blue
-BIPurple='\033[1;95m'     # Purple
-BICyan='\033[1;96m'       # Cyan
-BIWhite='\033[1;97m'      # White
-UWhite='\033[4;37m'       # White
-On_IPurple='\033[0;105m'  #
-On_IRed='\033[0;101m'
-IBlack='\033[0;90m'       # Black
-IRed='\033[0;91m'         # Red
-IGreen='\033[0;92m'       # Green
-IYellow='\033[0;93m'      # Yellow
-IBlue='\033[0;94m'        # Blue
-IPurple='\033[0;95m'      # Purple
-ICyan='\033[0;96m'        # Cyan
-IWhite='\033[0;97m'       # White
-NC='\e[0m'
-green() { echo -e "\\033[32;1m${*}\\033[0m"; }
-red() { echo -e "\\033[31;1m${*}\\033[0m"; }
-
-# // Export Banner Status Information
-export EROR="[${RED} EROR ${NC}]"
-export INFO="[${YELLOW} INFO ${NC}]"
-export OKEY="[${GREEN} OKEY ${NC}]"
-export PENDING="[${YELLOW} PENDING ${NC}]"
-export SEND="[${YELLOW} SEND ${NC}]"
-export RECEIVE="[${YELLOW} RECEIVE ${NC}]"
-
-# // Export Align
-export BOLD="\e[1m"
-export WARNING="${RED}\e[5m"
-export UNDERLINE="\e[4m"
-BURIQ () {
-    curl -sS https://raw.githubusercontent.com/User058/permission/main/Regist > /root/tmp
-    data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
-    for user in "${data[@]}"
-    do
-    exp=( `grep -E "^### $user" "/root/tmp" | awk '{print $3}'` )
-    d1=(`date -d "$exp" +%s`)
-    d2=(`date -d "$biji" +%s`)
-    exp2=$(( (d1 - d2) / 86400 ))
-    if [[ "$exp2" -le "0" ]]; then
-    echo $user > /etc/.$user.ini
-    else
-    rm -f /etc/.$user.ini > /dev/null 2>&1
-    fi
-    done
-    rm -f /root/tmp
-}
+dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
+biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
+#########################
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/User058/permission/main/Regist | grep $MYIP | awk '{print $2}')
-echo $Name > /usr/local/etc/.$Name.ini
-CekOne=$(cat /usr/local/etc/.$Name.ini)
+red='\e[1;31m'
+green='\e[0;32m'
+NC='\e[0m'
 
-Bloman () {
-if [ -f "/etc/.$Name.ini" ]; then
-CekTwo=$(cat /etc/.$Name.ini)
-    if [ "$CekOne" = "$CekTwo" ]; then
-        res="Expired"
-    fi
-else
-res="Permission Accepted..."
-fi
-}
-
-PERMISSION () {
-    MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/User058/permission/main/Regist | awk '{print $4}' | grep $MYIP)
-    if [ "$MYIP" = "$IZIN" ]; then
-    Bloman
-    else
-    res="Permission Denied!"
-    fi
-    BURIQ
-}
-PERMISSION
-if [ -f /home/needupdate ]; then
-red "Your script need to update first !"
-exit 0
-elif [ "$res" = "Permission Accepted..." ]; then
-echo -ne
-else
-red "Permission Denied!"
-exit 0
-fi
 clear
 source /var/lib/scrz-prem/ipvps.conf
 if [[ "$IP" = "" ]]; then
@@ -99,34 +18,18 @@ fi
 tls="$(cat ~/log-install.txt | grep -w "Vless TLS" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vless None TLS" | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
-echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│              CREATE VLESS ACCOUNT               │" | lolcat
-echo -e "└─────────────────────────────────────────────────┘" | lolcat
-read -p "Username         : " user
-read -p "Quota (GB)       : " quota
-read -p "Max Ip login     : " iplimit
-read -p "Days        	  : " masaaktif
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\E[44;1;39m      Add Xray/Vless Account      \E[0m"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 
-#QUOTA
-if [[ $quota -gt 0 ]]; then
-echo -e "$[$quota * 1024 * 1024 * 1024]" > /etc/cobek/limit/vless/quota/$user
-else
-echo > /dev/null
-fi
-#IPLIMIT
-if [[ $iplimit -gt 0 ]]; then
-echo -e "$iplimit" > /etc/cobek/limit/vless/ip/$user
-else
-echo > /dev/null
-fi
-
+		read -rp "User: " -e user
 		CLIENT_EXISTS=$(grep -w $user /etc/xray/config.json | wc -l)
 
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then
 clear
-echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│              CREATE VLESS ACCOUNT               │" | lolcat
-echo -e "└─────────────────────────────────────────────────┘" | lolcat
+		echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+		echo -e "\E[44;1;39m      Add Xray/Vless Account      \E[0m"
+		echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 			echo ""
 			echo "A client with the specified name was already created, please choose another name."
 			echo ""
@@ -136,40 +39,36 @@ echo -e "└──────────────────────�
 	done
 
 uuid=$(cat /proc/sys/kernel/random/uuid)
+read -p "Expired (days): " masaaktif
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 sed -i '/#vless$/a\#& '"$user $exp"'\
-},{"id": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
+},{"id": "'""$user""'","email": "'""$user""'"' /etc/xray/config.json
 sed -i '/#vlessgrpc$/a\#& '"$user $exp"'\
-},{"id": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
-vlesslink1="vless://${uuid}@${domain}:443?path=/vless&security=tls&encryption=none&type=ws#${user}"
-vlesslink2="vless://${uuid}@${domain}:80?path=/vless&encryption=none&type=ws#${user}"
-vlesslink3="vless://${uuid}@${domain}:443?mode=gun&security=tls&encryption=none&type=grpc&serviceName=vless-grpc&sni=${domain}#${user}"
+},{"id": "'""$user""'","email": "'""$user""'"' /etc/xray/config.json
+vlesslink1="vless://${user}@${domain}:$tls?path=/hidessh-vless&security=tls&encryption=none&type=ws#${user}"
+vlesslink2="vless://${user}@${domain}:$none?path=/hidessh-vless&encryption=none&type=ws#${user}"
+vlesslink3="vless://${user}@${domain}:$tls?mode=gun&security=tls&encryption=none&type=grpc&serviceName=hidessh-vless-grpc&sni=google.com#${user}"
 systemctl restart xray
 clear
-echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│                  VLESS ACCOUNT                  │" | lolcat
-echo -e "└─────────────────────────────────────────────────┘" | lolcat               
-echo -e ""                
-echo -e "Username     : $user"
-echo -e "CITY         : $(cat /root/.mycity)"
-echo -e "ISP          : $(cat /root/.myisp)"
-echo -e "Host/IP      : $(cat /etc/xray/domain)"
-echo -e "Port tls/ssl : 443"
-echo -e "Port non tls : 80"
-echo -e "Key          : $uuid"
-echo -e "Network      : ws, grpc"
-echo -e "Path TLS     : /vless"
-echo -e "serviceName  : vless-grpc"               
-echo -e ""  
-echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"                 
-echo -e "Link Tls  => ${vlesslink1}"
-echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"                
-echo -e "Link None => ${vlesslink2}"
-echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"                
-echo -e "Link Grpc => ${vlesslink3}"
-echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"                
-echo -e "Expired => $exp"
-echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e ""             
-read -n 1 -s -r -p "Press any key to back on menu"
-menu-vless
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "\E[44;1;39m        Xray/Vless Account        \E[0m" | tee -a /etc/log-create-user.log
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "Remarks : ${user}" | tee -a /etc/log-create-user.log
+echo -e "Domain : ${domain}" | tee -a /etc/log-create-user.log
+echo -e "port TLS : $tls" | tee -a /etc/log-create-user.log
+echo -e "port none TLS : $none" | tee -a /etc/log-create-user.log
+echo -e "id : ${user}" | tee -a /etc/log-create-user.log
+echo -e "Encryption : none" | tee -a /etc/log-create-user.log
+echo -e "Network : ws" | tee -a /etc/log-create-user.log
+echo -e "Path : /hidessh-vless" | tee -a /etc/log-create-user.log
+echo -e "Path : hidessh-vless-grpc" | tee -a /etc/log-create-user.log
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "Link TLS : ${vlesslink1}" | tee -a /etc/log-create-user.log
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "Link none TLS : ${vlesslink2}" | tee -a /etc/log-create-user.log
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "Link GRPC : ${vlesslink3}" | tee -a /etc/log-create-user.log
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "Expired On : $exp" | tee -a /etc/log-create-user.log
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo "" | tee -a /etc/log-create-user.log
