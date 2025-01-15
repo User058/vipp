@@ -100,9 +100,9 @@ fi
 portsshws=`cat /root/log-install.txt | grep -w "SSH Websocket" | cut -d: -f2 | awk '{print $1}'`
 wsssl=`cat /root/log-install.txt | grep -w "SSH SSL Websocket" | cut -d: -f2 | awk '{print $1}'`
 
-echo -e "◇━━━━━━━━━━━━━━━━━◇"
-echo -e "   ADD SSH ACCOUNT"
-echo -e "◇━━━━━━━━━━━━━━━━━◇"
+cho -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\\E[0;41;36m      ADD SSH Account		      \E[0m"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 read -p "Username       : " Login
 read -p "Password       : " Pass
 read -p "Expired (Days) : " masaaktif
