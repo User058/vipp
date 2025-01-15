@@ -103,6 +103,11 @@ red "Permission Denied!"
 exit 0
 fi
 clear
+purple="\033[1;95m"
+r="\033[1;31m"  #REDTERANG
+Blue="\033[0;34m"
+y='\033[1;33m' #yellow
+g="\033[1;92m"
 
 function detailvmess(){
 clear
@@ -483,19 +488,19 @@ echo -e "└──────────────────────�
 }
 
 clear
-echo -e "\e[32m════════════════════════════════════════" | 
-echo -e "             ═══[ VMESS ]═══"
-echo -e "\e[32m════════════════════════════════════════" | 
-echo -e "┌─────────────────────────────────────────────────┐" | 
-echo -e "${BICyan}[${BIGreen}1${BICyan}]${BIGreen} Create Vmess Account  ${NC}   "
-echo -e "${BICyan}[${BIGreen}2${BICyan}]${BIGreen} Create Trial Vmess   ${NC}  "
-echo -e "${BICyan}[${BIGreen}3${BICyan}]${BIGreen} Delete Vmess Account ${NC}   "
-echo -e "${BICyan}[${BIGreen}4${BICyan}]${BIGreen} Renew Vmess Account  ${NC}   "
-echo -e "${BICyan}[${BIGreen}5${BICyan}]${BIGreen} Check Vmess Users Login   ${NC}  "
-echo -e "${BICyan}[${BIGreen}6${BICyan}]${BIGreen} Vmess Account Details  ${NC}   "
-echo -e "${BICyan}[${BIGreen}0${BICyan}]${BIGreen} BACK TO MENU${NC}"
-echo -e "${BICyan}[${BIGreen}x${BICyan}]${BIGreen} EXIT   ${NC}  "
-echo -e "└──────────────────────────────────────────────────┘" | 
+echo -e "  \033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "  \\E[0;41;36m           VMESS MENU           \E[0m"
+echo -e "  \033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "  ┌─────────────────────────────────────────────────┐" | lolcat
+echo -e "  $y 1.${BIGreen} Create Vmess Account  ${NC}   "
+echo -e "  $y 2.${BIGreen} Create Trial Vmess   ${NC}  "
+echo -e "  $y 3.${BIGreen} Delete Vmess Account ${NC}   "
+echo -e "  $y 4.${BIGreen} Renew Vmess Account  ${NC}   "
+echo -e "  $y 5.${BIGreen} Check Vmess Users Login   ${NC}  "
+echo -e "  $y 6.${BIGreen} Vmess Account Details  ${NC}   "
+echo -e "  $y 0.${BIGreen} BACK TO MENU${NC}"
+echo -e "  $y x.${BIGreen} EXIT   ${NC}  "
+echo -e "  └──────────────────────────────────────────────────┘" | lolcat
 echo ""
 read -p " Select menu : " opt
 echo -e ""
@@ -508,5 +513,5 @@ case $opt in
 6) clear ; detailvmess ;;
 0) clear ; menu ;;
 x) exit ;;
-*) echo -e "" ; echo "Press any key to back on menu" ; sleep 1 ; menu ;;
+*) echo -e "" ; echo "Press any key to back on menu" ; sleep 0 ; menu-vmess ;;
 esac

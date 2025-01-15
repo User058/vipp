@@ -101,7 +101,11 @@ red "Permission Denied!"
 exit 0
 fi
 clear
-
+purple="\033[1;95m"
+r="\033[1;31m"  #REDTERANG
+Blue="\033[0;34m"
+y='\033[1;33m' #yellow
+g="\033[1;92m"
 function detailssws(){
 clear
 MYIP=$(wget -qO- ipv4.icanhazip.com);
@@ -382,19 +386,19 @@ echo ""
     fi
 }
 clear
-echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│                 SHADOWSOCKS MENU                │" | lolcat
-echo -e "└─────────────────────────────────────────────────┘" | lolcat
-echo -e " ┌───────────────────────────────────────────────┐" | lolcat
-echo -e "     ${BICyan}[${BIGreen}1${BICyan}]${BIGreen} Create ShadowSocks Account   ${NC}   "
-echo -e "     ${BICyan}[${BIGreen}2${BICyan}]${BIGreen} Trial ShadowSocks Account   ${NC}   "
-echo -e "     ${BICyan}[${BIGreen}3${BICyan}]${BIGreen} Delete ShadowSocks Account   ${NC}   "
-echo -e "     ${BICyan}[${BIGreen}4${BICyan}]${BIGreen} Renew ShadowSocks Account   ${NC}   "
-echo -e "     ${BICyan}[${BIGreen}5${BICyan}]${BIGreen} Cek User Active XRAY  ${NC}    "
-echo -e "     ${BICyan}[${BIGreen}6${BICyan}]${BIGreen} Detail ShadowSocks Account  ${NC} "
-echo -e "     ${BICyan}[${BIGreen}0${BICyan}]${BIGreen} Back To Menu ${NC} "
-echo -e "     ${BICyan}[${BIGreen}x${BICyan}]${BIGreen} Exit${NC} "
-echo -e " └─────────────────────────────────────────────────────┘" | lolcat
+echo -e "  \033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "  \\E[0;41;36m       SHADOWSOCK MENU          \E[0m"
+echo -e "  \033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "  ┌─────────────────────────────────────────────────┐" | lolcat
+echo -e "  $y 1.${BIGreen} Create Shadowsock Account  ${NC}   "
+echo -e "  $y 2.${BIGreen} Create Trial Shadowsock   ${NC}  "
+echo -e "  $y 3.${BIGreen} Delete Shadowsock Account ${NC}   "
+echo -e "  $y 4.${BIGreen} Renew Shadowsock Account  ${NC}   "
+echo -e "  $y 5.${BIGreen} Check Shadowsock Users Login   ${NC}  "
+echo -e "  $y 6.${BIGreen} Shadowsock Account Details  ${NC}   "
+echo -e "  $y 0.${BIGreen} BACK TO MENU${NC}"
+echo -e "  $y x.${BIGreen} EXIT   ${NC}  "
+echo -e "  └──────────────────────────────────────────────────┘" | lolcat
 echo ""
 read -p " Select menu : " opt
 echo -e ""
@@ -407,5 +411,5 @@ case $opt in
 6) clear ; detailssws ;;
 0) clear ; menu ;;
 x) exit ;;
-*) echo -e "" ; echo "Press any key to back on menu" ; sleep 1 ; menu ;;
+*) echo -e "" ; echo "Press any key to back on menu" ; sleep 0 ; menu-ss ;;
 esac

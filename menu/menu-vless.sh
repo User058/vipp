@@ -103,14 +103,18 @@ red "Permission Denied!"
 exit 0
 fi
 clear
-
+purple="\033[1;95m"
+r="\033[1;31m"  #REDTERANG
+Blue="\033[0;34m"
+y='\033[1;33m' #yellow
+g="\033[1;92m"
 function detailvless(){
 clear
 MYIP=$(wget -qO- ipv4.icanhazip.com);
 NUMBER_OF_CLIENTS=$(grep -c -E "^#& " "/etc/xray/config.json")
         if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│                CEK DETAIL VMESS                 │" | lolcat
+echo -e "│                CEK DETAIL vless                 │" | lolcat
 echo -e "└─────────────────────────────────────────────────┘" | lolcat
                 echo ""
                 echo "You have no existing clients!"
@@ -119,7 +123,7 @@ echo -e "└──────────────────────�
         fi
 
 echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│                CEK DETAIL VMESS                 │" | lolcat
+echo -e "│                CEK DETAIL vless                 │" | lolcat
 echo -e "└─────────────────────────────────────────────────┘" | lolcat
         echo " Select the existing client to view the config"
         echo " Press CTRL+C to return"
@@ -369,7 +373,7 @@ echo -e "└──────────────────────�
     echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
     echo ""
 echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│               USER058 STR              │" | lolcat
+echo -e "│               USER058 STR                       │" | lolcat
 echo -e "└─────────────────────────────────────────────────┘" | lolcat
 echo ""
     read -n 1 -s -r -p "Press any key to back on menu"
@@ -378,19 +382,19 @@ echo ""
     fi
 }
 clear
-echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│                     VLESS MENU                  │" | lolcat
-echo -e "└─────────────────────────────────────────────────┘" | lolcat
-echo -e " ┌───────────────────────────────────────────────┐" | lolcat
-echo -e "     ${BICyan}[${BIGreen}1${BICyan}]${BIGreen} Create Vless Account${NC}     "
-echo -e "     ${BICyan}[${BIGreen}2${BICyan}]${BIGreen} Trial Vless Acoount  ${NC}   "
-echo -e "     ${BICyan}[${BIGreen}3${BICyan}]${BIGreen} Delete Vless Account ${NC}    "
-echo -e "     ${BICyan}[${BIGreen}4${BICyan}]${BIGreen} Renew Vless Account  ${NC}   "
-echo -e "     ${BICyan}[${BIGreen}5${BICyan}]${BIGreen} Check Active Users XRAY ${NC}    "
-echo -e "     ${BICyan}[${BIGreen}6${BICyan}]${BIGreen} Vless Account Details  ${NC}   "
-echo -e "     ${BICyan}[${BIGreen}0${BICyan}]${BIGreen} Back To Menu   ${NC}  "
-echo -e "     ${BICyan}[${BIGreen}x${BICyan}]${BIGreen} Exit ${NC}  "
-echo -e " └──────────────────────────────────────────────┘" | lolcat
+echo -e "  \033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "  \\E[0;41;36m           VLESS MENU           \E[0m"
+echo -e "  \033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "  ┌─────────────────────────────────────────────────┐" | lolcat
+echo -e "  $y 1.${BIGreen} Create vless Account  ${NC}   "
+echo -e "  $y 2.${BIGreen} Create Trial vless   ${NC}  "
+echo -e "  $y 3.${BIGreen} Delete Vless Account ${NC}   "
+echo -e "  $y 4.${BIGreen} Renew Vless Account  ${NC}   "
+echo -e "  $y 5.${BIGreen} Check Vless Users Login   ${NC}  "
+echo -e "  $y 6.${BIGreen} Vless Account Details  ${NC}   "
+echo -e "  $y 0.${BIGreen} BACK TO MENU${NC}"
+echo -e "  $y x.${BIGreen} EXIT   ${NC}  "
+echo -e "  └──────────────────────────────────────────────────┘" | lolcat
 echo ""
 read -p " Select menu : " opt
 echo -e ""
@@ -403,5 +407,5 @@ case $opt in
 6) clear ; detailvless;;
 0) clear ; menu ;;
 x) exit ;;
-*) echo -e "" ; echo "Press any key to back on menu" ; sleep 1 ; menu ;;
+*) echo -e "" ; echo "Press any key to back on menu" ; sleep 0 ; menu-vless ;;
 esac

@@ -103,7 +103,11 @@ red "Permission Denied!"
 exit 0
 fi
 clear
-
+purple="\033[1;95m"
+r="\033[1;31m"  #REDTERANG
+Blue="\033[0;34m"
+y='\033[1;33m' #yellow
+g="\033[1;92m"
 function detailtrojan(){
 clear
 MYIP=$(wget -qO- ipv4.icanhazip.com);
@@ -366,18 +370,18 @@ echo -e "└──────────────────────�
     fi
 }
 clear
-echo -e "┌─────────────────────────────────────────────────┐" | lolcat
-echo -e "│                    TROJAN MENU                  │" | lolcat
-echo -e "└─────────────────────────────────────────────────┘" | lolcat
+echo -e "  \033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "  \\E[0;41;36m         VMESS TROJAN           \E[0m"
+echo -e "  \033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "┌───────────────────────────────────────────────┐" | lolcat
-echo -e "     ${BICyan}[${BIGreen}1${BICyan}]${BIGreen} Create Trojan Account ${NC}     "
-echo -e "     ${BICyan}[${BIGreen}2${BICyan}]${BIGreen} Create Trial Trojan ${NC}    "
-echo -e "     ${BICyan}[${BIGreen}3${BICyan}]${BIGreen} Delete Trojan Account  ${NC}    "
-echo -e "     ${BICyan}[${BIGreen}4${BICyan}]${BIGreen} Renew Trojan Account ${NC}    "
-echo -e "     ${BICyan}[${BIGreen}5${BICyan}]${BIGreen} Check Active Users XRAY  ${NC}   "
-echo -e "     ${BICyan}[${BIGreen}6${BICyan}]${BIGreen} Check Trojan Details  ${NC}    "
-echo -e "     ${BICyan}[${BIGreen}0${BICyan}]${BIGreen} Back To Menu${NC}"
-echo -e "     ${BICyan}[${BIGreen}x${BICyan}]${BIGreen} Exit${NC}"
+echo -e "   $y 1.${BIGreen} Create Trojan Account ${NC}     "
+echo -e "   $y 2.${BIGreen} Create Trial Trojan ${NC}    "
+echo -e "   $y 3.${BIGreen} Delete Trojan Account  ${NC}    "
+echo -e "   $y 4.${BIGreen} Renew Trojan Account ${NC}    "
+echo -e "   $y 5.${BIGreen} Check Active Users XRAY  ${NC}   "
+echo -e "   $y 6.${BIGreen} Check Trojan Details  ${NC}    "
+echo -e "   $y 7.${BIGreen} Back To Menu${NC}"
+echo -e "   $y 8.${BIGreen} Exit${NC}"
 echo -e "└──────────────────────────────────────────────┘" | lolcat
 echo ""
 read -p " Select menu : " opt
@@ -391,5 +395,5 @@ case $opt in
 6) clear ; detailtrojan ;;
 0) clear ; menu ;;
 x) exit ;;
-*) echo -e "" ; echo "Press any key to back on menu" ; sleep 1 ; menu ;;
+*) echo -e "" ; echo "Press any key to back on menu" ; sleep 1 ; menu-trojan ;;
 esac
