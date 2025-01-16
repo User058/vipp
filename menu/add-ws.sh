@@ -168,7 +168,7 @@ echo -e "id : ${user}" | tee -a /etc/log-create-user.log
 echo -e "alterId : 0" | tee -a /etc/log-create-user.log
 echo -e "Security : auto" | tee -a /etc/log-create-user.log
 echo -e "Network : ws" | tee -a /etc/log-create-user.log
-echo -e "Path : /hidessh-vmess" | tee -a /etc/log-create-user.log
+echo -e "Path : /user058-vmess" | tee -a /etc/log-create-user.log
 echo -e "ServiceName : user058-vmess-grpc" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e "Link TLS : ${vmesslink1}" | tee -a /etc/log-create-user.log
