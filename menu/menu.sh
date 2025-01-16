@@ -98,6 +98,12 @@ export BOLD="\e[1m"
 export WARNING="${RED}\e[5m"
 export UNDERLINE="\e[4m"
 
+#// Expiery
+data_ip="https://kytvpn.xcodehoster.com/izin"
+d2=$(date -d "$date_list" +"+%s")
+d1=$(date -d "$Exp" +"+%s")
+dayleft=$(( ($d1 - $d2) / 86400 ))
+
 # // Exporting IP Address
 export IP=$( curl -s https://ipinfo.io/ip/ )
 
