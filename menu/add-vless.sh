@@ -2,6 +2,14 @@
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
+clear
+source /var/lib/scrz-prem/ipvps.conf
+if [[ "$IP" = "" ]]; then
+domain=$(cat /etc/xray/domain)
+else
+domain=$IP
+fi
+
 BURIQ () {
     curl -sS https://raw.githubusercontent.com/User058/permission/main/Regist> /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
@@ -56,13 +64,7 @@ else
 red "Permission Denied!"
 exit 0
 fi
-clear
-source /var/lib/scrz-prem/ipvps.conf
-if [[ "$IP" = "" ]]; then
-domain=$(cat /etc/xray/domain)
-else
-domain=$IP
-fi
+
 tls="$(cat ~/log-install.txt | grep -w "Vless TLS" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vless None TLS" | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
