@@ -111,7 +111,7 @@ asu=`cat<<EOF
       "id": "${user}",
       "aid": "0",
       "net": "ws",
-      "path": "/hidessh-vmess",
+      "path": "/user058-vmess",
       "type": "none",
       "host": "${domain}",
       "tls": "tls"
@@ -126,7 +126,7 @@ ask=`cat<<EOF
       "id": "${user}",
       "aid": "0",
       "net": "ws",
-      "path": "/hidessh-vmess",
+      "path": "/user058-vmess",
       "type": "none",
       "host": "${domain}",
       "tls": "none"
@@ -141,7 +141,7 @@ grpc=`cat<<EOF
       "id": "${user}",
       "aid": "0",
       "net": "grpc",
-      "path": "hidessh-vmess-grpc",
+      "path": "user058-vmess-grpc",
       "type": "none",
       "host": "${domain}",
       "tls": "tls"
@@ -169,7 +169,7 @@ echo -e "alterId : 0" | tee -a /etc/log-create-user.log
 echo -e "Security : auto" | tee -a /etc/log-create-user.log
 echo -e "Network : ws" | tee -a /etc/log-create-user.log
 echo -e "Path : /hidessh-vmess" | tee -a /etc/log-create-user.log
-echo -e "ServiceName : hidessh-vmess-grpc" | tee -a /etc/log-create-user.log
+echo -e "ServiceName : user058-vmess-grpc" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e "Link TLS : ${vmesslink1}" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
