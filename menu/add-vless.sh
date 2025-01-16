@@ -56,11 +56,6 @@ else
 red "Permission Denied!"
 exit 0
 fi
-MYIP=$(curl -sS ipv4.icanhazip.com)
-red='\e[1;31m'
-green='\e[0;32m'
-NC='\e[0m'
-
 clear
 source /var/lib/scrz-prem/ipvps.conf
 if [[ "$IP" = "" ]]; then
