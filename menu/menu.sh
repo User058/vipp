@@ -158,7 +158,7 @@ echo -e "  ${CYAN}[02]${NC} • ${RED}[${NC}${PURPLE} VMESS MENU ${NC}${RED}]${N
 echo -e "  ${CYAN}[03]${NC} • ${RED}[${NC}${PURPLE} VLESS MENU ${NC}${RED}]${NC}           ${CYAN}[10]${NC} • ${RED}[${NC}${PURPLE} CHANGE HOST ${NC}${RED}]${NC}     "
 echo -e "  ${CYAN}[04]${NC} • ${RED}[${NC}${PURPLE} TROJAN MENU ${NC}${RED}]${NC}          ${CYAN}[11]${NC} • ${RED}[${NC}${PURPLE} RUNNING SERVICE ${NC}${RED}]${NC}    "
 echo -e "  ${CYAN}[05]${NC} • ${RED}[${NC}${PURPLE} SSWS MENU ${NC}${RED}]${NC}            ${CYAN}[12]${NC} • ${RED}[${NC}${PURPLE} UPDATE ${NC}${RED}]${NC}    "
-echo -e "  ${CYAN}[06]${NC} • ${RED}[${NC}${PURPLE} BAN-DWITH INFO${NC}${RED}]${NC}        ${CYAN}[13]${NC} • ${RED}[${NC}${PURPLE} RESTART ${NC}${RED}]${NC}     "
+echo -e "  ${CYAN}[06]${NC} • ${RED}[${NC}${PURPLE} BAND-WITH INFO${NC}${RED}]${NC}        ${CYAN}[13]${NC} • ${RED}[${NC}${PURPLE} RESTART ${NC}${RED}]${NC}     "
 echo -e "  ${CYAN}[07]${NC} • ${RED}[${NC}${PURPLE} REBOOT ${NC}${RED}]${NC}               ${CYAN}[14]${NC} • ${RED}[${NC}${PURPLE} EXIT ${NC}${RED}]${NC} "
 echo -e "$COLOR1┌────────────────────────────────────────────────────────────┐${NC}"
 echo -e ""
