@@ -239,7 +239,7 @@ curl ipinfo.io/city?token=7ce50028ba7184 > /root/.mycity
 curl ifconfig.me > /root/.ip
 curl ipinfo.io/region?token=7ce50028ba7184 > /root/.region
 curl ifconfig.me > /root/.myip
-neofetch | grep "CPU" | cut -d: -f2 | sed 's/ //g' > /root/.cpuu
+neofetch | grep "CPU" | cut -d: -f2 | sed 's/ //g' > /root/.cpu
 # // Making Certificate
 clear
 echo -e "[ ${GREEN}INFO${NC} ] Starting renew cert... " 
