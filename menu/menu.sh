@@ -8,7 +8,7 @@ date_list=$(date +"%Y-%m-%d" -d "$data_server")
 
 BURIQ () {
     curl -sS https://raw.githubusercontent.com/User058/permission/main/Regist > /root/tmp
-    data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
+     data=(`cat /root/tmp | grep -E "^### " | awk '{print $2}'`)
     for user in "${data[@]}"
     do
     exp=( `grep -E "^### $user" "/root/tmp" | awk '{print $3}'` )
@@ -104,7 +104,6 @@ d1=$(date -d "$Exp" +"+%s")
 dayleft=$(( ($d1 - $d2) / 86400 ))
 
 # // SSH Websocket Proxy
-ssh_ws=$( systemctl status ws-epro | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
 if [[ $ssh_ws == "running" ]]; then
     status_ws="${GREEN}ON${NC}"
 else
