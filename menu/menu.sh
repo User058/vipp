@@ -128,7 +128,7 @@ fi
 clear
 clear
 echo -e "$COLOR1┌────────────────────────────────────────────────────────────┐${NC}"
-echo -e "                <<USER058 VPS SERVICE>>                  \E[0m"
+echo -e "${YELLOW}${BOLD}       	 ✩░▒▓▆▅▃▂▁𝐔𝐒𝐄𝐑𝟎𝟓𝟖 𝐕𝐏𝐒 𝐒𝐄𝐑𝐕𝐈𝐂𝐄▁▂▃▅▆▓▒░✩               \E[0m"
 echo -e "$COLOR1└────────────────────────────────────────────────────────────┘${NC}"
 echo -e "  ${BLUE}• ${GREEN}Sever Uptime        ${NC}= $( uptime -p  | cut -d " " -f 2-10000 ) "
 echo -e "  ${BLUE}• ${GREEN}Current Time        ${NC}= $( date -d "0 days" +"%d-%m-%Y | %X" )"
@@ -147,8 +147,8 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "      ${COLOR2}[ SSH Websocket${NC}: ${GREEN}ON ${NC}]  [ NGINX${NC}:${status_nginx} ] [ XRAY${NC} : ${status_xray} ] "
 echo -e "$COLOR1└────────────────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│  \033[0m ${BOLD}${YELLOW}SSH     VMESS       VLESS      TROJAN       SHADOWSOCKS$NC  $COLOR1│"
-echo -e "$COLOR1│  \033[0m ${Blue} $ssh1      $vma           $vla          $tra                $ssa   $NC    $COLOR1│"
+echo -e "$COLOR1│  \033[0m ${BOLD}${YELLOW}SSH       VMESS       VLESS      TROJAN     SHADOWSOCKS$NC  $COLOR1│"
+echo -e "$COLOR1│  \033[0m ${Blue}$ssh1          $vma            $vla          $tra            $ssa   $NC    $COLOR1│"
 echo -e "$COLOR1└────────────────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────────────────────────────────────────────┐${NC}"
 echo -e "                          <<MAIN MENU>>                    \E[0m"  |lolcat
