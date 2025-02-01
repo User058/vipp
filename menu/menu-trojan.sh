@@ -371,7 +371,7 @@ echo -e "└──────────────────────�
 }
 clear
 echo -e "  \033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "  \\E[0;41;36m         VMESS TROJAN           \E[0m"
+echo -e "  \\E[0;41;97m         VMESS TROJAN           \E[0m"
 echo -e "  \033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "┌───────────────────────────────────────────────┐" | lolcat
 echo -e "   $y 1.${BIGreen} Create Trojan Account ${NC}     "

@@ -614,7 +614,7 @@ menu-ssh
 }
 clear
 echo -e "   \033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "   \\E[0;41;36m           SSH MENU             \E[0m"
+echo -e "   \\E[0;41;97m           SSH MENU             \E[0m"
 echo -e "   \033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "  ┌─────────────────────────────────┐"
 echo -e "   $y 1.${BIGreen} Create SSH Account ${NC}    "

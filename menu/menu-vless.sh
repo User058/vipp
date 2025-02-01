@@ -383,7 +383,7 @@ echo ""
 }
 clear
 echo -e "  \033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "  \\E[0;41;36m           VLESS MENU           \E[0m"
+echo -e "  \\E[0;41;97m           VLESS MENU           \E[0m"
 echo -e "  \033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "  ┌─────────────────────────────────────────────────┐" | lolcat
 echo -e "  $y 1.${BIGreen} Create vless Account  ${NC}   "
