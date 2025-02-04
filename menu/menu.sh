@@ -5,6 +5,16 @@ RED='\033[0;31m'
 ipsaya=$(wget -qO- ipinfo.io/ip)
 data_server=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 date_list=$(date +"%Y-%m-%d" -d "$data_server")
+MODEL2=$(cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g')
+vnstat_profile=$(vnstat | sed -n '3p' | awk '{print $1}' | grep -o '[^:]*')
+vnstat -i ${vnstat_profile} >/etc/t1
+today=$(vnstat -i ${vnstat_profile} | grep today | awk '{print $8}')
+todayd=$(vnstat -i ${vnstat_profile} | grep today | awk '{print $8}')
+today_v=$(vnstat -i ${vnstat_profile} | grep today | awk '{print $9}')
+today_rx=$(vnstat -i ${vnstat_profile} | grep today | awk '{print $2}')
+today_rxv=$(vnstat -i ${vnstat_profile} | grep today | awk '{print $3}')
+today_tx=$(vnstat -i ${vnstat_profile} | grep today | awk '{print $5}')
+today_txv=$(vnstat -i ${vnstat_profile} | grep today | awk '{print $6}')
 
 BURIQ () {
     curl -sS https://raw.githubusercontent.com/User058/permission/main/Regist > /root/tmp
@@ -146,6 +156,7 @@ echo -e "                          << STATUS>>                    \E[0m" |lolcat
 echo -e "$COLOR1┌────────────────────────────────────────────────────────────┐${NC}"
 echo -e "      ${COLOR2}[ SSH Websocket${NC}: ${GREEN}ON ${NC}]  [ NGINX${NC}:${status_nginx} ] [ XRAY${NC} : ${status_xray} ] "
 echo -e "$COLOR1└────────────────────────────────────────────────────────────┘${NC}"
+echo -e "${NC}${RED}		DAILY BANDWIDTH USAGE$NC	:${NC}${YELLOW} ${WH}$today_tx $today_txv" 
 echo -e "$COLOR1┌────────────────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│  \033[0m ${BOLD}${YELLOW}SSH       VMESS       VLESS      TROJAN     SHADOWSOCKS$NC  $COLOR1│"
 echo -e "$COLOR1│  \033[0m ${Blue}$ssh1          $vma            $vla          $tra            $ssa   $NC    $COLOR1│"

@@ -28,7 +28,6 @@ vnstat_profile=$(vnstat | sed -n '3p' | awk '{print $1}' | grep -o '[^:]*')
 vnstat -i ${vnstat_profile} >/etc/t1
 bulan=$(date +%b)
 tahun=$(date +%y)
-ba=$(curl -s https://pastebin.com/raw/0gWiX6hE)
 today=$(vnstat -i ${vnstat_profile} | grep today | awk '{print $8}')
 todayd=$(vnstat -i ${vnstat_profile} | grep today | awk '{print $8}')
 today_v=$(vnstat -i ${vnstat_profile} | grep today | awk '{print $9}')
