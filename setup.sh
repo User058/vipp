@@ -430,6 +430,57 @@ gg="PM"
 else
 gg="AM"
 fi
+rm -fr /root/limit
+rm -fr /root/weleh.sh 
+rm -fr /root/arzsource.sh 
+rm -fr /root/ssh-vpn.sh
+rm -fr /root/ins-xray.sh
+rm -fr /root/setup.sh
+rm -fr /root/domain
+rm -fr /root/ssh-vpn.sh
+rm -fr /root/ins-xray.sh
+rm -fr /root/install.sh
+systemctl daemon-reload
+systemctl enable client
+systemctl enable nginx
+systemctl enable quota
+systemctl enable ws-stunnel
+systemctl enable stunnel5
+systemctl enable xray
+systemctl enable udp-custom
+systemctl start client
+systemctl start nginx
+systemctl start quota
+systemctl start ws-stunnel
+systemctl start stunnel5
+systemctl start xray
+systemctl start udp-custom
+clear
+echo -e "
+
+TEXT="
+==================================
+Detail Install Script
+==================================
+IP VPS: $ip_vps
+Domain: $(cat /etc/xray/domain)
+Waktu Install: $date
+Client Name: $Name
+==================================
+
+
+clear
+curl -s --max-time $TIME -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
+clear
+echo -e 
+==================================
+Detail Install Script
+==================================
+IP VPS        : $ip_vps
+Domain        : $(cat /etc/xray/domain)
+Date & Time   : $date
+Client Name   : $Name
+==================================
 curl -sS ipv4.icanhazip.com > /etc/myipvps
 echo  " "
 echo "=====================-[ PREMIUM VVIP ]-===================="
@@ -473,33 +524,6 @@ echo  "================-[ SCRIPT PREMIUM VVIP ]-================"
 echo -e ""
 echo  ""
 echo  "" | tee -a log-install.txt
-rm -fr /root/limit
-rm -fr /root/weleh.sh 
-rm -fr /root/arzsource.sh 
-rm -fr /root/ssh-vpn.sh
-rm -fr /root/ins-xray.sh
-rm -fr /root/setup.sh
-rm -fr /root/domain
-rm -fr /root/ssh-vpn.sh
-rm -fr /root/ins-xray.sh
-rm -fr /root/install.sh
-systemctl daemon-reload
-systemctl enable client
-systemctl enable nginx
-systemctl enable quota
-systemctl enable ws-stunnel
-systemctl enable stunnel5
-systemctl enable xray
-systemctl enable udp-custom
-systemctl start client
-systemctl start nginx
-systemctl start quota
-systemctl start ws-stunnel
-systemctl start stunnel5
-systemctl start xray
-systemctl start udp-custom
-rm -fr /root/*
-secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt
-echo -e "Installation Successful; Rebooting In 5 Secs !!"
+echo -e "Instal sukses proses reboot selama 5 detik !!"
 sleep 5
 reboot
