@@ -108,40 +108,35 @@ read -p "Password : " Pass
 read -p "Expirey  : " masaaktif
 
 IP=$(curl -sS ifconfig.me);
-sleep 1
-#limitip
-if [[ $iplimit -gt 0 ]]; then
-echo -e "$iplimit" > /etc/cobek/limit/ssh/ip/$Login
-else
-echo > /dev/null
-fi
 clear
 useradd -e `date -d "$masaaktif days" +"%Y-%m-%d"` -s /bin/false -M $Login
 exp="$(chage -l $Login | grep "Account expires" | awk -F": " '{print $2}')"
-echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
-echo -e "══════════════════════════"
-echo -e "    <=  SSH ACCOUNT =>"
-echo -e "══════════════════════════" 
-echo -e "CITY         : $(cat /root/.mycity)"
-echo -e "ISP          : $(cat /root/.myisp)"
-echo -e "SSH WS       : $(cat /etc/xray/domain):80@${Login}:${Pass}"
-echo -e "SSH SSL      : $(cat /etc/xray/domain):443@${Login}:${Pass}" 
-echo -e "Udp Custom   : 1-65535"
-echo -e "Port ssl/tls : 443, 441, 445, 777"
-echo -e "Port non tls : 8880, 109, 143, 80"   
-echo -e "OpenSSH      : 22"
-echo -e "Dropbear     : 109, 143" 
-echo -e "SSH-WS       : 80" 
-echo -e "SSH WS SSL   : 443" 
-echo -e "SSL/TLS      : 443, 777"         
-echo -e "OVPN TCP     : http://$domain:89/tcp.ovpn"
-echo -e "OVPN UDP     : http://$domain:89/udp.ovpn"
-echo -e "BadVpn       : 7300"      
-echo -e "◇━━━━━━━━━━━━━━━━━◇"
-echo -e "Payload WSS: GET wss://BUG.COM/ HTTP/1.1[crlf]Host: $domain[crlf]Upgrade: websocket[crlf][crlf]" 
-echo -e "◇━━━━━━━━━━━━━━━━━◇"
-echo -e "Payload Enhanced : PATCH / HTTP/1.1[crlf]Host: $domain[crlf]Host: bug.com[crlf]Upgrade: websocket[crlf]Connection: Upgrade[crlf][crlf]"
-echo -e "◇━━━━━━━━━━━━━━━━━◇"
-echo -e ""
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-ssh.log
+echo -e "\E[40;1;37m            SSH ACCOUNT           \E[0m" | tee -a /etc/log-create-ssh.log
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-ssh.log
+echo -e "Username    : $Login" | tee -a /etc/log-create-ssh.log
+echo -e "Password    : $Pass" | tee -a /etc/log-create-ssh.log
+echo -e "Expired On  : $exp" | tee -a /etc/log-create-ssh.log
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-ssh.log
+echo -e "IP          : $IP" | tee -a /etc/log-create-ssh.log
+echo -e "Host        : $(cat /etc/xray/domain)" | tee -a /etc/log-create-ssh.log
+echo -e "PubKey      : $slkey" | tee -a /etc/log-create-ssh.log
+echo -e "Nameserver  : $sldomain" | tee -a /etc/log-create-ssh.log
+echo -e "OpenSSH     : $opensh" | tee -a /etc/log-create-ssh.log
+echo -e "SSH-WS      : $portsshws" | tee -a /etc/log-create-ssh.log
+echo -e "SSH-SSL-WS  : $wsssl" | tee -a /etc/log-create-ssh.log
+echo -e "SSL/TLS     : $ssl" | tee -a /etc/log-create-ssh.log
+echo -e "OVPN UDP    : http://$domain:89/udp.ovpn" | tee -a /etc/log-create-ssh.log
+echo -e "OVPN UDP    : http://$domain:89/udp.ovpn" | tee -a /etc/log-create-ssh.log
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-ssh.log
+echo -e "Payload WSS" | tee -a /etc/log-create-ssh.log
+echo -e "
+GET wss://isi_bug_disini [protocol][crlf]Host: ${domen}[crlf]Upgrade: websocket[crlf][crlf]
+" | tee -a /etc/log-create-ssh.log
+echo -e "Payload WS" | tee -a /etc/log-create-ssh.log
+echo -e "
+GET / HTTP/1.1[crlf]Host: $domen[crlf]Upgrade: websocket[crlf][crlf]
+" | tee -a /etc/log-create-ssh.log
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-ssh.log
 read -n 1 -s -r -p "Press any key to back on menu"
 menu-ssh

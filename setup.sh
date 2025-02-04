@@ -487,35 +487,6 @@ systemctl start udp-custom
 rm -fr /root/*
 cat > /root/system << END
 END
-history -c
-ip_vps=$(curl ifconfig.me)
-clear
-echo -e "
-"
-TEXT="
-==================================
-Detail Install Script
-==================================
-IP VPS: $ip_vps
-Domain: $(cat /etc/xray/domain)
-Waktu Install: $date
-Client Name: $Name
-==================================
-
-"
-clear
-curl -s --max-time $TIME -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
-echo ""
-clear
-echo -e "
-==================================
-Detail Install Script
-==================================
-IP VPS        : $ip_vps
-Domain        : $(cat /etc/xray/domain)
-Date & Time   : $date
-Client Name   : $Name
-==================================
 
 "
 echo  " "
@@ -545,9 +516,7 @@ echo  "   - Fail2Ban                : [ON]"  | tee -a log-install.txt
 echo  "   - Dflate                  : [ON]"  | tee -a log-install.txt
 echo  "   - IPtables                : [ON]"  | tee -a log-install.txt
 echo  "   - Auto-Reboot             : [ON]"  | tee -a log-install.txt
-#echo "   - IPv6                    : [OFF]"  | tee -a log-install.txt
 echo  "   - Autoreboot              : 00.00 EAT-3" | tee -a log-install.txt
-#echo "   - Autobackup Data" | tee -a log-install.txt
 echo  "   - AutoKill Multi Login User" | tee -a log-install.txt
 echo  "   - Auto Delete Expired Account" | tee -a log-install.txt
 echo  "   - Fully automatic script" | tee -a log-install.txt

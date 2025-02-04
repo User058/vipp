@@ -626,6 +626,7 @@ echo -e "   $y 6.${BIGreen} MultiLogin SSH   ${NC}  "
 echo -e "   $y 7.${BIGreen} Auto Del user Exp  ${NC}   "
 echo -e "   $y 8.${BIGreen} Auto Kill user SSH ${NC}   "
 echo -e "   $y 9.${BIGreen} Check SSH Accounts ${NC}"
+echo -e "   $y 10.${BIGreen} Check Username & Pass SSH ${NC}"
 echo -e "   $y 0.${BIGreen} Back To Menu  ${NC}    "
 echo -e "   $y x.${BIGreen} Exit ${NC}"
 echo -e "  └──────────────────────────────────┘" 
@@ -642,6 +643,7 @@ case $opt in
 7) clear ; autodel ;;
 8) clear ; autokill ;;
 9) clear ; member ;;
+10)clear ; cat /etc/log-create-ssh.log ;;
 0) clear ; menu ;;
 x) exit ;;
 *) echo -e "" ; echo "Press 0 for main menu" ; sleep 0 ; menu-ssh ;;
