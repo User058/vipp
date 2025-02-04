@@ -461,8 +461,7 @@ secs_to_human "$(($(date +%s) - ${start}))"
 sudo hostnamectl set-hostname $username
 clear
 echo -e "
-"
-TEXT="
+"TEXT="
 ==================================
 Detail Install Script
 ==================================
@@ -472,7 +471,7 @@ Waktu Install: $date
 Client Name: $Name
 ==================================
 
-
+"
 clear
 curl -s --max-time $TIME -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 echo ""
