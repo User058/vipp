@@ -128,8 +128,8 @@ echo -e "SlowDNS     : 443,80,8080,53,5300"
 echo -e "UDPGW       : 7100-7300" | tee -a /etc/log-create-ssh.log
 echo -e "SSH-80      : $(cat /etc/xray/domain):80@$Login:$Pass"
 echo -e "SSH-443     : $(cat /etc/xray/domain):443@$Login:$Pass"
-echo -e "OVPN TCP     : http://$domain:89/tcp.ovpn" | tee -a /etc/log-create-ssh.log
-echo -e "OVPN UDP     : http://$domain:89/udp.ovpn" | tee -a /etc/log-create-ssh.log
+echo -e "OVPN TCP     :http://$(cat /etc/xray/domain):89/tcp.ovpn" | tee -a /etc/log-create-ssh.log
+echo -e "OVPN UDP     :http://$(cat /etc/xray/domain):89/udp.ovpn" | tee -a /etc/log-create-ssh.log
 echo -e "SETING-UDP  : $(cat /etc/xray/domain):1-65535@$Login:$Pass"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-ssh.log
 echo -e "Expired On     : $exp" | tee -a /etc/log-create-ssh.log
