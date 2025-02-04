@@ -159,7 +159,7 @@ echo -e "  ${CYAN}[03]${NC} • ${RED}[${NC}${PURPLE} VLESS MENU ${NC}${RED}]${N
 echo -e "  ${CYAN}[04]${NC} • ${RED}[${NC}${PURPLE} TROJAN MENU ${NC}${RED}]${NC}          ${CYAN}[11]${NC} • ${RED}[${NC}${PURPLE} RUNNING SERVICE ${NC}${RED}]${NC}    "
 echo -e "  ${CYAN}[05]${NC} • ${RED}[${NC}${PURPLE} SSWS MENU ${NC}${RED}]${NC}            ${CYAN}[12]${NC} • ${RED}[${NC}${PURPLE} UPDATE SCRIPT${NC}${RED}]${NC}    "
 echo -e "  ${CYAN}[06]${NC} • ${RED}[${NC}${PURPLE} BAND-WITH INFO${NC}${RED}]${NC}        ${CYAN}[13]${NC} • ${RED}[${NC}${PURPLE} RESTART ${NC}${RED}]${NC}     "
-echo -e "  ${CYAN}[07]${NC} • ${RED}[${NC}${PURPLE} REBOOT ${NC}${RED}]${NC}               ${CYAN}[X]${NC}  • ${RED}[${NC}${PURPLE} EXIT ${NC}${RED}]${NC} "
+echo -e "  ${CYAN}[07]${NC} • ${RED}[${NC}${PURPLE} REBOOT ${NC}${RED}]${NC}               ${RED}[X]${NC}   • ${RED}[${NC}${PURPLE} EXIT SCRIPT ${NC}${RED}]${NC} "
 echo -e "$COLOR1┌────────────────────────────────────────────────────────────┐${NC}"
 echo -e ""
 echo -ne " Select menu : "; read opt
