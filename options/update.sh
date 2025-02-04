@@ -21,76 +21,40 @@ ICyan='\033[0;96m'        # Cyan
 IWhite='\033[0;97m'       # White
 NC='\e[0m'
 GitUser="User058"
-# UPDATE RUN-UPDATE
-cd /usr/bin
-wget -O run-update "https://raw.githubusercontent.com/User058/vipp/main/options/update.sh"
-chmod +x run-update
-# RUN UPDATE
+
 echo ""
 echo -e "┌─────────────────────────────────────────────────┐" | lolcat
 echo -e "│                 PROSES UPDATE                   │" | lolcat
 echo -e "└─────────────────────────────────────────────────┘" | lolcat
 echo -e "\e[0;32mNew Version Downloading started!\e[0m"
 cd /usr/bin
-wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/User058/vipp/main/menu/add-ws.sh"
-wget -q -O /usr/bin/add-ssws "https://raw.githubusercontent.com/User058/vipp/main/menu/add-ssws.sh"
-wget -q -O /usr/bin/add-vless "https://raw.githubusercontent.com/User058/vipp/main/menu/add-vless.sh"
-wget -q -O /usr/bin/add-tr "https://raw.githubusercontent.com/User058/vipp/main/menu/add-tr.sh"
-wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/User058/vipp/main/menu/usernew.sh"
-wget -q -O /usr/bin/autoreboot "https://raw.githubusercontent.com/User058/vipp/main/options/autoreboot.sh"
-wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/User058/vipp/main/options/restart.sh"
-wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/User058/vipp/main/options/tendang.sh"
-wget -q -O /usr/bin/clearlog "https://raw.githubusercontent.com/User058/vipp/main/options/clearlog.sh"
-wget -q -O /usr/bin/running "https://raw.githubusercontent.com/User058/vipp/main/options/running.sh"
-wget -q -O /usr/bin/port-websocket "https://raw.githubusercontent.com/User058/vipp/main/menu/port-websocket.sh"
-wget -q -O /usr/bin/cek-bandwidth "https://raw.githubusercontent.com/User058/vipp/main/options/cek-bandwidth.sh"
-wget -q -O /usr/bin/limitspeed "https://raw.githubusercontent.com/User058/vipp/main/options/limitspeed.sh"
-wget -q -O /usr/bin/menu-vless "https://raw.githubusercontent.com/User058/vipp/main/menu/menu-vless.sh"
-wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/User058/vipp/main/menu/menu-vmess.sh"
-wget -q -O /usr/bin/menu-ss "https://raw.githubusercontent.com/User058/vipp/main/menu/menu-ss.sh"
-wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/User058/vipp/main/menu/menu-trojan.sh"
-wget -q -O /usr/bin/menu-ssh "https://raw.githubusercontent.com/User058/vipp/main/menu/menu-ssh.sh"
-wget -q -O /usr/bin/menu-backup "https://raw.githubusercontent.com/User058/vipp/main/menu/menu-backup.sh"
-wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/User058/vipp/main/menu/menu.sh"
-wget -q -O /usr/bin/webmin "https://raw.githubusercontent.com/User058/vipp/main/options/webmin.sh"
-wget -q -O /usr/bin/xp "https://raw.githubusercontent.com/User058/vipp/main/menu/xp.sh"
-wget -q -O /usr/bin/update "https://raw.githubusercontent.com/User058/vipp/main/options/update.sh"
-#wget -q -O /usr/bin/menu-theme "https://raw.githubusercontent.com/User058/vipp/main/menu/menu-theme.sh"
-wget -q -O /usr/bin/info "https://raw.githubusercontent.com/User058/vipp/main/options/info.sh"
-wget -q -O /usr/bin/infoserv "https://raw.githubusercontent.com/User058/vipp/main/options/infoserv.sh"
-wget -q -O /usr/bin/menu-set "https://raw.githubusercontent.com/User058/vipp/main/menu/menu-set.sh"
-wget -q -O /usr/bin/about "https://raw.githubusercontent.com/User058/vipp/main/options/about.sh"
-chmod +x /usr/bin/add-ws
-chmod +x /usr/bin/add-ssws
-chmod +x /usr/bin/add-vless
-chmod +x /usr/bin/add-tr
-chmod +x /usr/bin/usernew
-chmod +x /usr/bin/autoreboot
-chmod +x /usr/bin/restart
-chmod +x /usr/bin/tendang
-chmod +x /usr/bin/clearlog
-chmod +x /usr/bin/running
-chmod +x /usr/bin/port-websocket
-chmod +x /usr/bin/cek-speed
-chmod +x /usr/bin/cek-bandwidth
-chmod +x /usr/bin/limitspeed
-chmod +x /usr/bin/menu-vless
-chmod +x /usr/bin/menu-vmess
-chmod +x /usr/bin/menu-ss
-chmod +x /usr/bin/menu-trojan
-chmod +x /usr/bin/menu-ssh
-chmod +x /usr/bin/menu-backup
-chmod +x /usr/bin/menu
-chmod +x /usr/bin/webmin
-chmod +x /usr/bin/xp
-chmod +x /usr/bin/update
-#chmod +x /usr/bin/menu-theme
-chmod +x /usr/bin/info
-chmod +x /usr/bin/infoserv
-chmod +x /usr/bin/menu-set
-chmod +x /usr/bin/about
-clear
-rm -f update.sh
+wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/User058/vipp/main/menu/add-ws.sh" && chmod +x /usr/bin/add-ws
+wget -q -O /usr/bin/add-ssws "https://raw.githubusercontent.com/User058/vipp/main/menu/add-ssws.sh" && chmod +x /usr/bin/add-ssws
+wget -q -O /usr/bin/add-vless "https://raw.githubusercontent.com/User058/vipp/main/menu/add-vless.sh" && chmod +x /usr/bin/add-vless
+wget -q -O /usr/bin/add-tr "https://raw.githubusercontent.com/User058/vipp/main/menu/add-tr.sh" && chmod +x /usr/bin/add-tr
+wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/User058/vipp/main/menu/usernew.sh" && chmod +x /usr/bin/usernew
+wget -q -O /usr/bin/autoreboot "https://raw.githubusercontent.com/User058/vipp/main/options/autoreboot.sh" && chmod +x /usr/bin/autoreboot
+wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/User058/vipp/main/options/restart.sh" && chmod +x /usr/bin/restart
+wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/User058/vipp/main/options/tendang.sh" && chmod +x /usr/bin/tendang
+wget -q -O /usr/bin/clearlog "https://raw.githubusercontent.com/User058/vipp/main/options/clearlog.sh" && chmod +x /usr/bin/clearlog
+wget -q -O /usr/bin/running "https://raw.githubusercontent.com/User058/vipp/main/options/running.sh" && chmod +x /usr/bin/running
+wget -q -O /usr/bin/port-websocket "https://raw.githubusercontent.com/User058/vipp/main/menu/port-websocket.sh" && chmod +x /usr/bin/port-websocket
+wget -q -O /usr/bin/cek-bandwidth "https://raw.githubusercontent.com/User058/vipp/main/options/cek-bandwidth.sh" && chmod +x /usr/bin/cek-bandwidth
+wget -q -O /usr/bin/limitspeed "https://raw.githubusercontent.com/User058/vipp/main/options/limitspeed.sh" && chmod +x /usr/bin/limitspeed
+wget -q -O /usr/bin/menu-vless "https://raw.githubusercontent.com/User058/vipp/main/menu/menu-vless.sh" && chmod +x /usr/bin/menu-vless
+wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/User058/vipp/main/menu/menu-vmess.sh" && chmod +x /usr/bin/menu-vmess
+wget -q -O /usr/bin/menu-ss "https://raw.githubusercontent.com/User058/vipp/main/menu/menu-ss.sh" && chmod +x /usr/bin/menu-ss
+wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/User058/vipp/main/menu/menu-trojan.sh" && chmod +x /usr/bin/menu-trojan
+wget -q -O /usr/bin/menu-ssh "https://raw.githubusercontent.com/User058/vipp/main/menu/menu-ssh.sh" && chmod +x /usr/bin/menu-ssh
+wget -q -O /usr/bin/menu-backup "https://raw.githubusercontent.com/User058/vipp/main/menu/menu-backup.sh" && chmod +x /usr/bin/menu-backup
+wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/User058/vipp/main/menu/menu.sh" && chmod +x /usr/bin/menu
+wget -q -O /usr/bin/webmin "https://raw.githubusercontent.com/User058/vipp/main/options/webmin.sh" && chmod +x /usr/bin/webmin
+wget -q -O /usr/bin/xp "https://raw.githubusercontent.com/User058/vipp/main/menu/xp.sh" && chmod +x /usr/bin/xp
+wget -q -O /usr/bin/update "https://raw.githubusercontent.com/User058/vipp/main/options/update.sh" && chmod +x /usr/bin/update
+wget -q -O /usr/bin/info "https://raw.githubusercontent.com/User058/vipp/main/options/info.sh" && chmod +x /usr/bin/info
+wget -q -O /usr/bin/infoserv "https://raw.githubusercontent.com/User058/vipp/main/options/infoserv.sh" && chmod +x /usr/bin/infoserv
+wget -q -O /usr/bin/menu-set "https://raw.githubusercontent.com/User058/vipp/main/menu/menu-set.sh" && chmod +x /usr/bin/menu-set
+wget -q -O /usr/bin/about "https://raw.githubusercontent.com/User058/vipp/main/options/about.sh" && chmod +x /usr/bin/about
 clear
 echo ""
 echo -e "┌─────────────────────────────────────────────────┐" | lolcat
