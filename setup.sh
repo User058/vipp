@@ -456,8 +456,9 @@ systemctl start stunnel5
 systemctl start xray
 systemctl start udp-custom
 rm -fr /root/*
-cat > /root/system << END
-END
+#sudo hostnamectl set-hostname $user
+secs_to_human "$(($(date +%s) - ${start}))"
+sudo hostnamectl set-hostname $username
 echo  " "
 echo "=====================-[ PREMIUM VVIP ]-===================="
 echo  ""
