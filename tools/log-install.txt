@@ -1,0 +1,30 @@
+   >>> Service & Port
+   - OpenSSH                 : 22
+   - SSH Websocket           : 80
+   - SSH SSL Websocket       : 443
+   - Stunnel5                : 447, 777
+   - Dropbear                : 109, 143
+   - Badvpn                  : 7100-7300
+   - Nginx                   : 81
+   - XRAY  Vmess TLS         : 443
+   - XRAY  Vmess None TLS    : 80
+   - XRAY  Vless TLS         : 443
+   - XRAY  Vless None TLS    : 80
+   - Trojan GRPC             : 443
+   - Trojan WS               : 443
+   - Sodosok WS/GRPC         : 443
+
+   >>> Server Information & Other Features
+   - Timezone                : Africa/Nairobi (EAT-3)
+   - Fail2Ban                : [ON]
+   - Dflate                  : [ON]
+   - IPtables                : [ON]
+   - Auto-Reboot             : [ON]
+   - Autoreboot On           : 0:00 AM [GMT+7]
+   - AutoKill Multi Login User
+   - Auto Delete Expired Account
+   - Fully automatic script
+   - VPS settings
+   - Restore Data
+   - Full Orders For Various Services
+
