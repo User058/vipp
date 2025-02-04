@@ -456,7 +456,6 @@ systemctl start stunnel5
 systemctl start xray
 systemctl start udp-custom
 clear
-fi
 echo -e 
 ==================================
 curl -sS ipv4.icanhazip.com > /etc/myipvps
