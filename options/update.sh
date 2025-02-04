@@ -56,6 +56,7 @@ wget -q -O /usr/bin/infoserv "https://raw.githubusercontent.com/User058/vipp/mai
 wget -q -O /usr/bin/menu-set "https://raw.githubusercontent.com/User058/vipp/main/menu/menu-set.sh" && chmod +x /usr/bin/menu-set
 wget -q -O /usr/bin/about "https://raw.githubusercontent.com/User058/vipp/main/options/about.sh" && chmod +x /usr/bin/about
 clear
+rm -f update.sh
 echo ""
 echo -e "┌─────────────────────────────────────────────────┐" | lolcat
 echo -e "│                 SCRIPT UPDATED                  │" | lolcat
