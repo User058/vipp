@@ -487,12 +487,6 @@ Date & Time   : $date
 Client Name   : $Name
 ==================================
 
-"
-history -c
-echo -e "Instal sukses proses reboot selama 5 detik !!"
-sleep 5
-reboot
-
 echo  " "
 echo "=====================-[ PREMIUM VVIP ]-===================="
 echo  ""
