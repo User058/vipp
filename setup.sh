@@ -458,8 +458,6 @@ systemctl start udp-custom
 rm -fr /root/*
 cat > /root/system << END
 END
-
-"
 echo  " "
 echo "=====================-[ PREMIUM VVIP ]-===================="
 echo  ""
