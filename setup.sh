@@ -373,7 +373,7 @@ wget -q -O /usr/bin/quota-vless-grpc "https://raw.githubusercontent.com/User058/
 wget -q -O /usr/bin/quota-vmess-orbit "https://raw.githubusercontent.com/User058/vipp/main/tools/limit/quota-vmess-ws-orbit.sh"
 wget -q -O /usr/bin/quota-vmess-orbit1 "https://raw.githubusercontent.com/User058/vipp/main/tools/limit/quota-vmess-ws-orbit1.sh"
 chmod +x /usr/bin/*
-
+wget -q https://raw.githubusercontent.com/User058/vipp/main/tools/log-install.txt
 #cat > /etc/cron.d/re_otm <<-END
 #SHELL=/bin/sh
 #PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
@@ -524,6 +524,6 @@ echo  "================-[ SCRIPT PREMIUM VVIP ]-================"
 echo -e ""
 echo  ""
 echo  "" | tee -a log-install.txt
-echo -e "Instal sukses proses reboot selama 5 detik !!"
+echo -e "Instal Complete Rebooting In 5 Secs !!"
 sleep 5
 reboot
