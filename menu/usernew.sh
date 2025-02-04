@@ -111,38 +111,38 @@ IP=$(curl -sS ifconfig.me);
 clear
 useradd -e `date -d "$masaaktif days" +"%Y-%m-%d"` -s /bin/false -M $Login
 exp="$(chage -l $Login | grep "Account expires" | awk -F": " '{print $2}')"
-echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" 
-echo -e "\E[40;1;37m            SSH ACCOUNT           \E[0m" 
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" 
-echo -e "Username    : $Login" 
-echo -e "Password    : $Pass" 
-echo -e "Expired On  : $exp" 
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" 
-echo -e "IP          : $IP" 
-echo -e "Host        : $(cat /etc/xray/domain)" 
-echo -e "OpenSSH     : 22" 
-echo -e "SSH-WS      : 80" 
-echo -e "SSH-SSL-WS  : 443" 
-echo -e "SSL/TLS     : 447 , 777" 
-echo -e "SlowDNS     : 443,80,8080,53,5300" 
-echo -e "UDPGW       : 7100-7300" 
-echo -e "SSH-80      : $(cat /etc/xray/domain):80@$Login:$Pass"
-echo -e "SSH-443     : $(cat /etc/xray/domain):443@$Login:$Pass"
-echo -e "OVPN TCP    : http://$(cat /etc/xray/domain):89/tcp.ovpn" 
-echo -e "OVPN UDP    : http://$(cat /etc/xray/domain):89/udp.ovpn" 
-echo -e "SETING-UDP  : $(cat /etc/xray/domain):1-65535@$Login:$Pass"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" 
-echo -e "Expired On     : $exp" 
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" 
-echo -e "Payload WSS" 
+echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null | tee -a /etc/log-create-ssh.log 
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-ssh.log 
+echo -e "\E[40;1;37m            SSH ACCOUNT           \E[0m" | tee -a /etc/log-create-ssh.log 
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-ssh.log 
+echo -e "Username    : $Login" | tee -a /etc/log-create-ssh.log  | tee -a /etc/log-create-ssh.log
+echo -e "Password    : $Pass"  | tee -a /etc/log-create-ssh.log
+echo -e "Expired On  : $exp"  | tee -a /etc/log-create-ssh.log
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-ssh.log 
+echo -e "IP          : $IP" | tee -a /etc/log-create-ssh.log 
+echo -e "Host        : $(cat /etc/xray/domain)"  | tee -a /etc/log-create-ssh.log
+echo -e "OpenSSH     : 22" | tee -a /etc/log-create-ssh.log 
+echo -e "SSH-WS      : 80" | tee -a /etc/log-create-ssh.log 
+echo -e "SSH-SSL-WS  : 443" | tee -a /etc/log-create-ssh.log 
+echo -e "SSL/TLS     : 447 , 777" | tee -a /etc/log-create-ssh.log 
+echo -e "SlowDNS     : 443,80,8080,53,5300" | tee -a /etc/log-create-ssh.log 
+echo -e "UDPGW       : 7100-7300" | tee -a /etc/log-create-ssh.log 
+echo -e "SSH-80      : $(cat /etc/xray/domain):80@$Login:$Pass" | tee -a /etc/log-create-ssh.log
+echo -e "SSH-443     : $(cat /etc/xray/domain):443@$Login:$Pass" | tee -a /etc/log-create-ssh.log
+echo -e "OVPN TCP    : http://$(cat /etc/xray/domain):89/tcp.ovpn"  | tee -a /etc/log-create-ssh.log
+echo -e "OVPN UDP    : http://$(cat /etc/xray/domain):89/udp.ovpn" | tee -a /etc/log-create-ssh.log 
+echo -e "SETING-UDP  : $(cat /etc/xray/domain):1-65535@$Login:$Pass" | tee -a /etc/log-create-ssh.log
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-ssh.log 
+echo -e "Expired On     : $exp" | tee -a /etc/log-create-ssh.log 
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-ssh.log 
+echo -e "Payload WSS" | tee -a /etc/log-create-ssh.log 
 echo -e "
 GET wss://isi_bug_disini [protocol][crlf]Host: $(cat /etc/xray/domain)[crlf]Upgrade: websocket[crlf][crlf]
-" 
-echo -e "Payload WS" 
-echo -e "
+"| tee -a /etc/log-create-ssh.log 
+echo -e "Payload WS" | tee -a /etc/log-create-ssh.log 
+echo -e " 
 GET / HTTP/1.1[crlf]Host: $(cat /etc/xray/domain)[crlf]Upgrade: websocket[crlf][crlf]
-" 
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" 
+" | tee -a /etc/log-create-ssh.log 
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-ssh.log 
 read -n 1 -s -r -p "Press any key to back on menu"
 menu-ssh

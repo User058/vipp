@@ -456,30 +456,8 @@ systemctl start stunnel5
 systemctl start xray
 systemctl start udp-custom
 clear
-echo -e "
-
-TEXT="
-==================================
-Detail Install Script
-==================================
-IP VPS: $ip_vps
-Domain: $(cat /etc/xray/domain)
-Waktu Install: $date
-Client Name: $Name
-==================================
-
-
-clear
-curl -s --max-time $TIME -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
-clear
+fi
 echo -e 
-==================================
-Detail Install Script
-==================================
-IP VPS        : $ip_vps
-Domain        : $(cat /etc/xray/domain)
-Date & Time   : $date
-Client Name   : $Name
 ==================================
 curl -sS ipv4.icanhazip.com > /etc/myipvps
 echo  " "
