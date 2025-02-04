@@ -456,11 +456,9 @@ systemctl start stunnel5
 systemctl start xray
 systemctl start udp-custom
 rm -fr /root/*
-rm -fr /root/*
-cat > /root/system << END
-END
-history -c
-ip_vps=$(curl ifconfig.me)
+#sudo hostnamectl set-hostname $user
+secs_to_human "$(($(date +%s) - ${start}))"
+sudo hostnamectl set-hostname $username
 clear
 echo -e "
 "
@@ -474,6 +472,7 @@ Waktu Install: $date
 Client Name: $Name
 ==================================
 
+"
 clear
 curl -s --max-time $TIME -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 echo ""
@@ -487,6 +486,12 @@ Domain        : $(cat /etc/xray/domain)
 Date & Time   : $date
 Client Name   : $Name
 ==================================
+
+"
+history -c
+echo -e "Instal sukses proses reboot selama 5 detik !!"
+sleep 5
+reboot
 
 echo  " "
 echo "=====================-[ PREMIUM VVIP ]-===================="
