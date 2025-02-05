@@ -103,17 +103,17 @@ echo -e "┌──────────────────────�
 echo -e "│                  MENU SETTINGS                  │" | lolcat
 echo -e "└─────────────────────────────────────────────────┘" | lolcat
 echo -e " ┌───────────────────────────────────────────────┐" | lolcat
-echo -e "   ${BICyan}[${BIGreen}3${BICyan}]${BIGreen}  Check Running${NC}"
-echo -e "   ${BICyan}[${BIGreen}4${BICyan}]${BIGreen}  Change Banner SSH${NC} "
-echo -e "   ${BICyan}[${BIGreen}7${BICyan}]${BIGreen}  Auto Reboot${NC}"
-echo -e "   ${BICyan}[${BIGreen}9${BICyan}]${BIGreen}  SpeedTest${NC}"
-echo -e "   ${BICyan}[${BIGreen}10${BICyan}]${BIGreen} Limit Speed${NC}"
-echo -e "   ${BICyan}[${BIGreen}11${BICyan}]${BIGreen} Webmin${NC}"
-echo -e "   ${BICyan}[${BIGreen}13${BICyan}]${BIGreen} Kick User Mullog${NC}"
-echo -e "   ${BICyan}[${BIGreen}14${BICyan}]${BIGreen} About SCRIPT${NC}"
-echo -e "   ${BICyan}[${BIGreen}15${BICyan}]${BIGreen} Set Reboot Hours${NC}"
-echo -e "   ${BICyan}[${BIGreen}16${BICyan}]${BIGreen} INSTALL UDP${NC}"
-echo -e "   ${BICyan}[${BIGreen}17${BICyan}]${BIGreen} INSTALL UDPGW MINI${NC}"
+echo -e "   ${BICyan}[${BIGreen}1${BICyan}]${BIGreen}  Check Running${NC}"
+echo -e "   ${BICyan}[${BIGreen}2${BICyan}]${BIGreen}  Change Banner SSH${NC} "
+echo -e "   ${BICyan}[${BIGreen}3${BICyan}]${BIGreen}  Auto Reboot${NC}"
+echo -e "   ${BICyan}[${BIGreen}4${BICyan}]${BIGreen}  SpeedTest${NC}"
+echo -e "   ${BICyan}[${BIGreen}5${BICyan}]${BIGreen}  Limit Speed${NC}"
+echo -e "   ${BICyan}[${BIGreen}6${BICyan}]${BIGreen}  Webmin${NC}"
+echo -e "   ${BICyan}[${BIGreen}7${BICyan}]${BIGreen}  Kick User Mullog${NC}"
+echo -e "   ${BICyan}[${BIGreen}8${BICyan}]${BIGreen}  About SCRIPT${NC}"
+echo -e "   ${BICyan}[${BIGreen}9${BICyan}]${BIGreen}  Set Reboot Hours${NC}"
+echo -e "   ${BICyan}[${BIGreen}10${BICyan}]${BIGreen} INSTALL UDP${NC}"
+echo -e "   ${BICyan}[${BIGreen}11${BICyan}]${BIGreen} INSTALL UDPGW MINI${NC}"
 echo -e "   ${BICyan}[${BIGreen}0${BICyan}]${BIGreen}  Back To Menu${NC}"
 echo -e "   ${BICyan}[${BIGreen}x${BICyan}]${BIGreen}  Exit${NC}"
 echo -e " └───────────────────────────────────────────────┘" | lolcat
@@ -121,23 +121,17 @@ echo -e ""
 read -p "  Select menu :  "  opt
 echo -e   ""
 case $opt in
-01 | 1) clear ; addhost ;;
-02 | 2) clear ; certxray ;;
-03 | 3) clear ; running ;;
-04 | 4) clear ; nano /etc/issue.net ;;
-05 | 5) clear ; cek-bandwidth ;;
-06 | 6) clear ; restart ;;
-07 | 7) clear ; autoreboot ;;
-08 | 8) clear ; reboot ;;
-09 | 9) clear ; speedtest ;;
-10 | 10) clear ; limitspeed ;;
-11 | 11) clear ; webmin ;;
-12 | 12) clear ; update ;;
-13 | 13) clear ; tendang ;;
-14 | 14) clear ; about ;;
-15 | 15) clear ; jam ;;
-16 | 16) clear ; wget https://raw.githubusercontent.com/king-vpn/v6/main/udpcustom/udp-custom.sh && chmod +x udp-custom.sh && ./udp-custom.sh ;;
-17 | 17) clear ;
+01 | 1) clear ; running ;;
+02 | 2) clear ; nano /etc/issue.net ;;
+03 | 3) clear ; autoreboot ;;
+04 | 4) clear ; speedtest ;;
+05 | 5) clear ; limitspeed ;;
+06 | 6) clear ; webmin ;;
+07 | 7) clear ; tendang ;;
+08 | 8) clear ; about ;;
+09 | 9) clear ; jam ;;
+10 | 10) clear ; wget https://raw.githubusercontent.com/king-vpn/v6/main/udpcustom/udp-custom.sh && chmod +x udp-custom.sh && ./udp-custom.sh ;;
+11 | 11) clear ;
 echo -e "PROSES INSTALASI UDPGW MINI 7100, 7200, 7300"; sleep 5;
 
 mkdir -p /usr/local/kyt/
@@ -163,5 +157,5 @@ echo -e "INSTALASI SUCCESS UDPGW MINI 7100, 7200, 7300"; sleep 5;
 exit ;;
 00 | 0) clear ; menu ;;
 x) exit ;;
-*) clear ; menu-set ;;
+*) clear ; exit ;;
 esac
