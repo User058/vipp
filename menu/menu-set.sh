@@ -130,16 +130,16 @@ case $opt in
 07 | 7) clear ; tendang ;;
 08 | 8) clear ; about ;;
 09 | 9) clear ; jam ;;
-10 | 10) clear ; wget https://raw.githubusercontent.com/king-vpn/v6/main/udpcustom/udp-custom.sh && chmod +x udp-custom.sh && ./udp-custom.sh ;;
+10 | 10) clear ; wget https://raw.githubusercontent.com/User058/vipp/main/udpcustom/udp-custom.sh && chmod +x udp-custom.sh && ./udp-custom.sh ;;
 11 | 11) clear ;
 echo -e "PROSES INSTALASI UDPGW MINI 7100, 7200, 7300"; sleep 5;
 
 mkdir -p /usr/local/kyt/
-wget -q -O /usr/local/kyt/udp-mini "https://raw.githubusercontent.com/king-vpn/v6/main/udpcustom/udp-mini"
+wget -q -O /usr/local/kyt/udp-mini "https://raw.githubusercontent.com/User058/vipp/main/udpcustom/udp-mini"
 chmod +x /usr/local/kyt/udp-mini
-wget -q -O /etc/systemd/system/udp-mini-1.service "https://raw.githubusercontent.com/king-vpn/v6/main/udpcustom/udp-mini-1.service"
-wget -q -O /etc/systemd/system/udp-mini-2.service "https://raw.githubusercontent.com/king-vpn/v6/main/udpcustom/udp-mini-2.service"
-wget -q -O /etc/systemd/system/udp-mini-3.service "https://raw.githubusercontent.com/king-vpn/v6/main/udpcustom/udp-mini-3.service"
+wget -q -O /etc/systemd/system/udp-mini-1.service "https://raw.githubusercontent.com/User058/vipp/main/udpcustom/udp-mini-1.service"
+wget -q -O /etc/systemd/system/udp-mini-2.service "https://raw.githubusercontent.com/User058/vipp/main/udpcustom/udp-mini-2.service"
+wget -q -O /etc/systemd/system/udp-mini-3.service "https://raw.githubusercontent.com/User058/vipp/main/udpcustom/udp-mini-3.service"
 systemctl disable udp-mini-1
 systemctl stop udp-mini-1
 systemctl enable udp-mini-1
