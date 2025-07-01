@@ -313,7 +313,7 @@ wget -q https://raw.githubusercontent.com/User058/vipp/main/tools/ins-xray.sh &&
 echo -e "┌─────────────────────────────────────────┐"
 echo -e " \E[41;1;39m            >>> Install BR <<<           \E[0m$NC"
 echo -e "└─────────────────────────────────────────┘"
-wget -q https://raw.githubusercontent.com/User058/vipp/main/backup/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+#wget -q https://raw.githubusercontent.com/User058/vipp/main/backup/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 
 # // Download Data
 echo -e "${GREEN}Download Menu${NC}"
